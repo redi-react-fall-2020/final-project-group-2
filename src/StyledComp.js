@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Category = styled.div`
   align-items: center;
-  background-color: #fff;
+
+  background-color: ${({ selected }) => (selected ? "#E79F9F" : "#fff")};
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -34,7 +35,8 @@ export const Address = styled.input`
   border-radius: 30px;
   margin-top: 30px;
   height: 2.5rem;
-  ouline: none;
+  outline: none;
+  padding: 5px 40px;
   width: 100%;
 `;
 

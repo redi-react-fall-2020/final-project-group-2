@@ -21,6 +21,27 @@ function App() {
     { name: "mexican", image: mexican },
     { name: "turkish", image: turkish },
   ]);
+  const [selectedCategories, setSelectedCategories] = useState(["indian"]);
+
+  const isSelected = (name) => {
+    //checks if the name is include
+    return selectedCategories.includes(name);
+  };
+
+  const handleCategoryClicked = (name) => {
+    // to remove already clicked category
+    if (isSelected(name)) {
+      setSelectedCategories((prevState) => {
+        return prevState.filter((item) => item !== name);
+      });
+      return;
+    }
+    // add clicked category into the list
+    setSelectedCategories((prevState) => {
+      return [...prevState, name];
+    });
+  };
+
   return (
     <div className="App">
       <div className="content-container">
@@ -32,7 +53,12 @@ function App() {
 
         <ListCategories>
           {cuisines.map((cuisine) => (
-            <CategorySelector cuisine={cuisine} key={cuisine.name} />
+            <CategorySelector
+              cuisine={cuisine}
+              key={cuisine.name}
+              isSelected={isSelected}
+              handleCategoryClicked={handleCategoryClicked}
+            />
           ))}
         </ListCategories>
         <SearchBar />
