@@ -1,0 +1,109 @@
+body {
+    background-image: url(img/bk.jpg);
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    background-size: cover;
+    background-position: unset;
+    color: #743434;
+}
+
+#container {
+    padding-left: 19px;
+    height: 61vh;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header {
+    margin-bottom: 92px;
+}
+
+.logo {}
+
+.title {
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    color: #743434;
+    text-align: center;
+    margin-bottom: 170px;
+}
+
+.title span {
+    font-weight: bold;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 62px;
+}
+
+.category {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.category:hover .categoryImg {
+    background-color: #E79F9F;
+}
+
+.categoryImg {
+    width: 68px;
+    height: 68px;
+    box-shadow: -1px 8px 21px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.categoryText {
+    margin-top: 14px;
+    color: #8F6363;
+}
+
+.searchInput {
+    height: 61px;
+    outline: none;
+    width: 699px;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 8px 2px 46px -22px rgba(0, 0, 0, 0.27);
+    border-radius: 98px;
+    padding: 0 0 0 31px;
+    font-size: 40px;
+    color: #947474;
+}
+
+::placeholder {
+    color: rgb(192, 192, 192);
+    font-size: 20px;
+}
+
+.popularRestaurants {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+.popularRestaurants span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.popularRestaurants span:hover {
+    text-decoration: underline;
+}
