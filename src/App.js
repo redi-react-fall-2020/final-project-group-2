@@ -21,7 +21,7 @@ function App() {
     { name: "mexican", image: mexican },
     { name: "turkish", image: turkish },
   ]);
-  const [selectedCategories, setSelectedCategories] = useState(["indian"]);
+  const [selectedCategories, setSelectedCategories] = useState(["chinese"]);
 
   const isSelected = (name) => {
     //checks if the name is include
