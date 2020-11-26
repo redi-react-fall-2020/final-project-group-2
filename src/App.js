@@ -1,46 +1,44 @@
-import logo from './img/logo.svg';
-import italian from './img/Italian.svg';
-import chinese from './img/chinese.svg';
-import indian from './img/indian.svg';
+import React, { useState } from "react";
+import logo from "./img/logo.svg";
+import italian from "./img/Italian.svg";
+import chinese from "./img/chinese.svg";
+import indian from "./img/indian.svg";
 import mexican from "./img/mexican.svg";
 import thai from "./img/thai.svg";
 import turkish from "./img/turkish.svg";
-import './App.css';
-import {Gateory,HeadingText,
-  HeadingTextBold} from "./StyledComp";
+import "./App.css";
+import { HeadingText, ListCategories } from "./StyledComp";
+import CategorySelector from "./components/CategorySelector";
+import SearchBar from "./components/SearchBar";
+import ViewRestaurants from "./components/ViewRestaurants";
 
 function App() {
+  const [cuisines, setCuisines] = useState([
+    { name: "italian", image: italian },
+    { name: "chinese", image: chinese },
+    { name: "thai", image: thai },
+    { name: "indian", image: indian },
+    { name: "mexican", image: mexican },
+    { name: "turkish", image: turkish },
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="content-container">
         <img src={logo} className="App-logo" alt="logo" />
-        <HeadingText><strong>Support </strong>Local Restuarant, Eat <br/> <strong>Great Food</strong> </HeadingText>
-        <Gateory>
-       <img src={italian} alt="italian Check"/>
-       <p>italian</p>
-        </Gateory>
-        <Gateory>
-       <img src={chinese} alt="chinese Check"/>
-       <p>chinese</p>
-        </Gateory>
-        <Gateory>
-       <img src={thai} alt="thai Check"/>
-       <p>thai</p>
-        </Gateory>
-        <Gateory>
-       <img src={indian} alt="indian Check"/>
-       <p>indian</p>
-        </Gateory>
-        <Gateory>
-       <img src={mexican} alt="mexican Check"/>
-       <p>mexican</p>
-        </Gateory>
-        <Gateory>
-       <img src={turkish} alt="turkish Check"/>
-       <p>turkish</p>
-        </Gateory>
-      
-      </header>
+        <HeadingText>
+          <strong>Support </strong>Local Restuarant, Eat <br />{" "}
+          <strong style={{ textDecoration: "underline" }}>Great Food</strong>{" "}
+        </HeadingText>
+
+        <ListCategories>
+          {cuisines.map((cuisine) => (
+            <CategorySelector cuisine={cuisine} key={cuisine.name} />
+          ))}
+        </ListCategories>
+        <SearchBar />
+        <ViewRestaurants />
+      </div>
+      <div className="empty-space"></div>
     </div>
   );
 }
