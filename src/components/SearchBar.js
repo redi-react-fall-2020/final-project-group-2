@@ -6,7 +6,7 @@ const SearchBar = () => {
     <div>
       <Address
         type="text"
-        placeholder="Find restuarants in your area "
+        placeholder="Find restaurants in your area "
       ></Address>
     </div>
   );
