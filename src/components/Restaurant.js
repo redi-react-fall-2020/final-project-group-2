@@ -5,6 +5,9 @@ import ratingscore from "../img/ratingscore.svg";
 import phoneIcon from "../img/phoneIcon.svg";
 import openNowIcon from "../img/Open-now-Icon.svg";
 
+
+
+
 const Restaurant = ({ restaurant }) => {
   return (
     <div className="restaurant-info">
@@ -33,7 +36,7 @@ const Restaurant = ({ restaurant }) => {
 
         <div className=" restaurant-rating-scoreVar ">
           <div className=" restaurant-rating ">
-            <img className=" rating-score" src={ratingscore} alt=" " />
+                      <img className=" rating-score" style={{ width: (restaurant.rating*100/5)+"%" } }   src={ratingscore} alt=" " />
           </div>
           <div className=" rateScorVar ">{restaurant.rating}</div>
         </div>
