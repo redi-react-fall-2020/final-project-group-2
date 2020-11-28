@@ -19,8 +19,8 @@ const LandingPage = ({
       <div className="content-container">
         <img src={logo} className="App-logo" alt="logo" />
         <HeadingText>
-          <strong>Support </strong>Local Restuarant, Eat <br />{" "}
-          <strong style={{ textDecoration: "underline" }}>Great Food</strong>{" "}
+          <strong>Support </strong>Local Restuarant,<br/>Eat&nbsp;
+          <strong style={{ textDecoration: "underline" }}> Great Food</strong>{" "}
         </HeadingText>
 
         <ListCategories>

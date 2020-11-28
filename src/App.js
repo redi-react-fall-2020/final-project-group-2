@@ -1,5 +1,5 @@
 import React, { useState, UseEffect } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import logo from "./img/logo.svg";
 import italian from "./img/Italian.svg";
 import chinese from "./img/chinese.svg";
@@ -9,8 +9,8 @@ import thai from "./img/thai.svg";
 import turkish from "./img/turkish.svg";
 import Restaurants from "./components/Restaurants";
 import "./App.css";
-
 import LandingPage from "./LandingPage";
+import './App.css';
 
 function App() {
   const [cuisines, setCuisines] = useState([

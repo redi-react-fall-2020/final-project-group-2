@@ -1,4 +1,7 @@
 import React from "react";
+import { Address, AddressWraper } from "../StyledComp";
+import {Link} from "react-router-dom";
+
 
 const Header = ({ logo }) => {
   return (
@@ -7,13 +10,18 @@ const Header = ({ logo }) => {
         {" "}
         <img src={logo} alt="logo" />
       </div>
-      <div>
-        <input
+      <AddressWraper>
+        <Address
           type="text"
           className="searchInput"
           placeholder="Find restaurants in your area"
         />
-      </div>
+        <Link to="/restaurants/berlin/?">
+        <i class="fa fa-search" style={{color:"#E79F9F",paddingTop: "10px", position:"relative",left:"-2rem"}} 
+       aria-hidden="true"></i>
+       </Link>
+      </AddressWraper>
+      
     </div>
   );
 };
