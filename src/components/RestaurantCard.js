@@ -5,7 +5,7 @@ import ratingscore from "../img/ratingscore.svg";
 import phoneIcon from "../img/phoneIcon.svg";
 import openNowIcon from "../img/Open-now-Icon.svg";
 
-const Restaurant = ({ restaurant }) => {
+const RestaurantCard = ({ restaurant }) => {
   return (
     <div className="restaurant-info">
       <div className="restaurant-img">
@@ -83,4 +83,4 @@ const Restaurant = ({ restaurant }) => {
   );
 };
 
-export default Restaurant;
+export default RestaurantCard;

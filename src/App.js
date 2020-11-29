@@ -10,7 +10,9 @@ import turkish from "./img/turkish.svg";
 import Restaurants from "./components/Restaurants";
 import "./App.css";
 import LandingPage from "./LandingPage";
-import './App.css';
+import "./App.css";
+
+import RestaurantsContext from "./contexts/restaurantsContext";
 
 function App() {
   const [cuisines, setCuisines] = useState([
@@ -22,6 +24,7 @@ function App() {
     { name: "turkish", image: turkish },
   ]);
   const [selectedCategories, setSelectedCategories] = useState(["chinese"]);
+  const [restaurants, setRestuarants] = useState([]);
 
   const isSelected = (name) => {
     //checks if the name is include
@@ -42,22 +45,28 @@ function App() {
     });
   };
 
+  const updateRestaurants = (list) => {
+    setRestuarants(list);
+  };
+
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <LandingPage
-            isSelected={isSelected}
-            handleCategoryClicked={handleCategoryClicked}
-            cuisines={cuisines}
-            selectedCategories={selectedCategories}
-          />
-        </Route>
-        <Route path="/restaurants/berlin">
-          <Restaurants logo={logo} />
-        </Route>
-      </Switch>
-    </Router>
+    <RestaurantsContext.Provider value={restaurants}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <LandingPage
+              isSelected={isSelected}
+              handleCategoryClicked={handleCategoryClicked}
+              cuisines={cuisines}
+              selectedCategories={selectedCategories}
+            />
+          </Route>
+          <Route path="/restaurants/berlin">
+            <Restaurants logo={logo} updateRestaurants={updateRestaurants} />
+          </Route>
+        </Switch>
+      </Router>
+    </RestaurantsContext.Provider>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Restaurant from "./Restaurant";
+import RestaurantCard from "./RestaurantCard";
 
 const RestaurantListings = ({ restaurants }) => {
   return (
@@ -10,7 +10,7 @@ const RestaurantListings = ({ restaurants }) => {
         </h2>
       </div>
       {restaurants.map((restaurant) => (
-        <Restaurant restaurant={restaurant} />
+        <RestaurantCard restaurant={restaurant} />
       ))}
     </div>
   );

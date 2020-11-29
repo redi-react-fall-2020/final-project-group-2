@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext, useContext } from "react";
 import "../restaurantsStyle.css";
 import Header from "./Header";
 import Filters from "./Filters";
 import RestaurantListings from "./RestaurantListings";
 
-const Restaurants = ({ logo }) => {
-  const [restaurants, setRestuarants] = useState([]);
+import RestaurantsContext from "../contexts/restaurantsContext";
 
+const Restaurants = ({ logo, updateRestaurants }) => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
@@ -14,9 +14,11 @@ const Restaurants = ({ logo }) => {
       );
       const data = await response.json();
 
-      setRestuarants(data.results);
+      updateRestaurants(data.results);
     })();
   }, []);
+
+  const restaurants = useContext(RestaurantsContext);
 
   return (
     <div id="container">
