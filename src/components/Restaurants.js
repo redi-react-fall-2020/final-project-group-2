@@ -187,7 +187,7 @@ const Restaurants = ({ logo }) => {
               </div>
             </div>
           </div>
-            <div className="mapView"><MapView restaurants={restaurants}></MapView></div>
+            <div className="mapView"><MapView restaurants={restaurants}/></div>
                  
         </div>
       </div>

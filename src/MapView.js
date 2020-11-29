@@ -11,10 +11,9 @@ export const icon = new Icon({
   iconSize: [50, 50]
 });
 
-export default function MapView() {
+export default function MapView({restaurants}) {
 
-
-
+  console.log(restaurants);
   const [activePark, setActivePark] = React.useState(null);
         /* console.log(results.results[0].geometry.location.lat); */
   return (
@@ -25,15 +24,15 @@ export default function MapView() {
         attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
 
       />
- {resto.results.map(resto => (
+ {restaurants.map(restaurant => (
         <Marker
-          key={resto.id}
+          key={restaurant.id}
           position={[
-            resto.geometry.location.lat,
-            resto.geometry.location.lng
+            restaurant.geometry.location.lat,
+            restaurant.geometry.location.lng
           ]}
           onClick={() => {
-            setActivePark(resto);
+            setActivePark(restaurant);
           }}
          
         />
