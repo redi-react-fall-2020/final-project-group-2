@@ -1,4 +1,4 @@
-import React, { useState, UseEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import logo from "./img/logo.svg";
 import italian from "./img/Italian.svg";
@@ -8,6 +8,7 @@ import mexican from "./img/mexican.svg";
 import thai from "./img/thai.svg";
 import turkish from "./img/turkish.svg";
 import Restaurants from "./components/Restaurants";
+import RestaurantDetail from "./components/RestaurantDetails";
 import "./App.css";
 import LandingPage from "./LandingPage";
 import "./App.css";
@@ -24,7 +25,8 @@ function App() {
     { name: "turkish", image: turkish },
   ]);
   const [selectedCategories, setSelectedCategories] = useState(["chinese"]);
-  const [restaurants, setRestuarants] = useState([]);
+  const [restaurants, setRestaurants] = useState([]);
+  const value = { restaurants, setRestaurants };
 
   const isSelected = (name) => {
     //checks if the name is include
@@ -45,12 +47,12 @@ function App() {
     });
   };
 
-  const updateRestaurants = (list) => {
-    setRestuarants(list);
-  };
+  // const updateRestaurants = (list) => {
+  //   setRestuarants(list);
+  // };
 
   return (
-    <RestaurantsContext.Provider value={restaurants}>
+    <RestaurantsContext.Provider value={value}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -61,8 +63,11 @@ function App() {
               selectedCategories={selectedCategories}
             />
           </Route>
-          <Route path="/restaurants/berlin">
-            <Restaurants logo={logo} updateRestaurants={updateRestaurants} />
+          <Route exact path="/restaurants/berlin">
+            <Restaurants logo={logo} />
+          </Route>
+          <Route exact path="/restaurants/berlin/:id">
+            <RestaurantDetail />
           </Route>
         </Switch>
       </Router>

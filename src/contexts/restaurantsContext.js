@@ -1,5 +1,8 @@
-import React from "react";
+import React, { createContext } from "react";
 
-const RestaurantsContext = React.createContext([]);
+const RestaurantsContext = createContext({
+  restaurants: [],
+  setRestaurants: () => {},
+});
 
 export default RestaurantsContext;

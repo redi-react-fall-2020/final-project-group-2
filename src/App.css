@@ -21,6 +21,10 @@
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .content-container {
   flex: 2;
 }
@@ -47,7 +51,6 @@
 .selected {
   background-color: #e79f9f;
 }
-
 
 .leaflet-container {
   width: 100%;

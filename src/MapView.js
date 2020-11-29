@@ -1,49 +1,44 @@
 import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { Map } from 'react-leaflet';
+import { Map } from "react-leaflet";
 import { Icon } from "leaflet";
-import * as resto from "./data/restaurant.json";
+// import * as resto from "./data/restaurant.json";
 import "./App.css";
-import restaurant from "./components/Restaurant";
+import restaurant from "./components/RestaurantCard";
 
 export const icon = new Icon({
   iconUrl: "/skateboarding.svg",
-  iconSize: [50, 50]
+  iconSize: [50, 50],
 });
 
-export default function MapView({restaurants}) {
-
+export default function MapView({ restaurants }) {
   console.log(restaurants);
   const [activePark, setActivePark] = React.useState(null);
-        /* console.log(results.results[0].geometry.location.lat); */
+  /* console.log(results.results[0].geometry.location.lat); */
   return (
-    <MapContainer  center={[52.51366387010728, 13.46198092010728]} zoom={13}>
-    
+    <MapContainer center={[52.51366387010728, 13.46198092010728]} zoom={13}>
       <TileLayer
         url="https://2.base.maps.ls.hereapi.com/maptile/2.1/maptile/newest/normal.day.grey/{z}/{x}/{y}/512/png8?apiKey=NE2s5TgA9jERMDU-qEbyqp371QEqf2hHBlwNhkbVPTw&ppi=320"
         attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-
       />
- {restaurants.map(restaurant => (
+      {restaurants.map((restaurant) => (
         <Marker
           key={restaurant.id}
           position={[
             restaurant.geometry.location.lat,
-            restaurant.geometry.location.lng
+            restaurant.geometry.location.lng,
           ]}
           onClick={() => {
             setActivePark(restaurant);
           }}
-         
         />
- ))}
-      
+      ))}
 
-{activePark && (
+      {activePark && (
         <Popup
           position={[
             activePark.geometry.location.lat,
-            activePark.geometry.location.lng
+            activePark.geometry.location.lng,
           ]}
           onClose={() => {
             setActivePark(null);
@@ -56,8 +51,6 @@ export default function MapView({restaurants}) {
           </div>
         </Popup>
       )}
-
-
-    </MapContainer >
+    </MapContainer>
   );
 }
