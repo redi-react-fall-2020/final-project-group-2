@@ -3,6 +3,8 @@ import "../restaurantsStyle.css";
 import Header from "./Header";
 import Filters from "./Filters";
 import RestaurantListings from "./RestaurantListings";
+import MapView from "../MapView";
+
 
 const Restaurants = ({ logo }) => {
   const [restaurants, setRestuarants] = useState([]);
@@ -19,7 +21,10 @@ const Restaurants = ({ logo }) => {
   }, []);
 
   return (
+<>
     <div id="container">
+
+
       <div className="contentWrapper">
         <Header logo={logo} />
         <div id="resultsDiv">
@@ -182,10 +187,13 @@ const Restaurants = ({ logo }) => {
               </div>
             </div>
           </div>
-          <div className="mapView"></div>
+            <div className="mapView"><MapView restaurants={restaurants}/></div>
+                 
         </div>
       </div>
     </div>
+
+ </>
   );
 };
 
