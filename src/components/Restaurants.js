@@ -3,6 +3,8 @@ import "../restaurantsStyle.css";
 import Header from "./Header";
 import Filters from "./Filters";
 import RestaurantListings from "./RestaurantListings";
+import MapView from "../MapView";
+
 
 import RestaurantsContext from "../contexts/restaurantsContext";
 
@@ -21,7 +23,10 @@ const Restaurants = ({ logo, updateRestaurants }) => {
   const restaurants = useContext(RestaurantsContext);
 
   return (
+<>
     <div id="container">
+
+
       <div className="contentWrapper">
         <Header logo={logo} />
         <div id="resultsDiv">
@@ -184,10 +189,13 @@ const Restaurants = ({ logo, updateRestaurants }) => {
               </div>
             </div>
           </div>
-          <div className="mapView"></div>
+            <div className="mapView"><MapView restaurants={restaurants}/></div>
+                 
         </div>
       </div>
     </div>
+
+ </>
   );
 };
 

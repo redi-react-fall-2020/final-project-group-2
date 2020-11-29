@@ -33,7 +33,12 @@ const RestaurantCard = ({ restaurant }) => {
 
         <div className=" restaurant-rating-scoreVar ">
           <div className=" restaurant-rating ">
-            <img className=" rating-score" src={ratingscore} alt=" " />
+            <img
+              className=" rating-score"
+              style={{ width: (restaurant.rating * 100) / 5 + "%" }}
+              src={ratingscore}
+              alt=" "
+            />
           </div>
           <div className=" rateScorVar ">{restaurant.rating}</div>
         </div>
