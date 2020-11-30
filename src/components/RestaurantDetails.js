@@ -1,36 +1,33 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState} from "react";
 import { useParams } from "react-router-dom";
-import RestaurantsContext from "../contexts/restaurantsContext";
+import RestaurantsContext from "../contexts/restaurantsContext"; 
+
 
 const RestaurantDetails = () => {
   const { restaurants } = useContext(RestaurantsContext);
+  const {id}  = useParams();
+  let slectedResturants ={};
 
-  const [restaurant, setRestaurant] = useState({});
+const getResturant =()=>{restaurants.map(item =>{
+  if (item.id===id){
+    slectedResturants=item;
+  }
+});}
+getResturant();
 
-  const { id } = useParams();
+ return (
 
-  useEffect(() => {
-    const result = restaurants.find((r) => r.id === id);
-    setRestaurant(result);
-  }, [id]);
-
-  // if (!restaurant) {
-  //   return;
-  // }
-  console.log("restaurant, ", restaurant);
-
-  return (
     <div className="restaurant-info">
       <div className="restaurant-img">
-        <img
+      <img
           className=" restaurant-img-link "
-          src={restaurant.photos[0].links[0]}
-          alt=" "
+          src={slectedResturants.photos[0].links[0]}
+          alt="Resturant photo "
         />
       </div>
       <div className=" restaurant-text-info ">
         <div className=" restaurant-text-Title-favoriteIcon ">
-          <h3 className=" restaurant-title ">{restaurant.name}</h3>
+          <h3 className=" restaurant-title ">{slectedResturants.name}</h3>
           <div className=" favoriteIcon ">
             <img src="" alt=" " />
           </div>
@@ -89,8 +86,8 @@ const RestaurantDetails = () => {
           )} */}
         </div>
       </div>
-    </div>
-  );
+    </div> 
+);
 };
 
 export default RestaurantDetails;
