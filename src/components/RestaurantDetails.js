@@ -9,7 +9,7 @@ const RestaurantDetails = () => {
   const [selectedRestaurant, setSelectedRestaurant] = useState();
 
   useEffect(() => {
-    const result = restaurants.find((r) => r.id === id);
+    const result = restaurants.find((item) => item.id === id);
     setSelectedRestaurant(result);
   }, [id]);
 
