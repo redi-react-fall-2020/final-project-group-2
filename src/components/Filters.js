@@ -5,37 +5,37 @@ const Filters = () => {
     <div className="filterArea">
       <div className="selectWrapper">
         <select className="filterSelect">
-          <option selected>Price</option>
+          <option default>Price</option>
           <option value="1">$</option>
           <option value="2">$$</option>
           <option value="3">$$$</option>
         </select>
         <select className="filterSelect">
-          <option selected>Open Now</option>
+          <option default>Open Now</option>
           <option value="1">$</option>
           <option value="2">$$</option>
           <option value="3">$$$</option>
         </select>
         <select className="filterSelect">
-          <option selected>By rating</option>
+          <option default>By rating</option>
           <option value="1">$</option>
           <option value="2">$$</option>
           <option value="3">$$$</option>
         </select>
         <select className="filterSelect">
-          <option selected>Delivery</option>
+          <option default>Delivery</option>
           <option value="1">$</option>
           <option value="2">$$</option>
           <option value="3">$$$</option>
         </select>
         <select className="filterSelect">
-          <option selected>dietary</option>
+          <option default>dietary</option>
           <option value="1">$</option>
           <option value="2">$$</option>
           <option value="3">$$$</option>
         </select>
         <select className="filterSelect">
-          <option selected>Category</option>
+          <option default>Category</option>
           <option value="1">$</option>
           <option value="2">$$</option>
           <option value="3">$$$</option>

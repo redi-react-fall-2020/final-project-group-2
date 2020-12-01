@@ -1,20 +1,17 @@
 import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { Map } from "react-leaflet";
-import { Icon } from "leaflet";
+
+
 // import * as resto from "./data/restaurant.json";
 import "./App.css";
 import restaurant from "./components/RestaurantCard";
 
-export const icon = new Icon({
-  iconUrl: "/skateboarding.svg",
-  iconSize: [50, 50],
-});
 
 export default function MapView({ restaurants }) {
   console.log(restaurants);
   const [activePark, setActivePark] = React.useState(null);
-  /* console.log(results.results[0].geometry.location.lat); */
+/* console.log(results.results[0].geometry.location.lat); */
+  
   return (
     <MapContainer center={[52.51366387010728, 13.46198092010728]} zoom={13}>
       <TileLayer
@@ -30,6 +27,7 @@ export default function MapView({ restaurants }) {
           ]}
           onClick={() => {
             setActivePark(restaurant);
+          
           }}
         />
       ))}
@@ -37,8 +35,8 @@ export default function MapView({ restaurants }) {
       {activePark && (
         <Popup
           position={[
-            activePark.geometry.location.lat,
-            activePark.geometry.location.lng,
+            restaurant.geometry.location.lat,
+            restaurant.geometry.location.lng,
           ]}
           onClose={() => {
             setActivePark(null);

@@ -11,18 +11,18 @@ const RestaurantCard = ({ restaurant }) => {
     <Link to={`/restaurants/berlin/${restaurant.id}`}>
       <div className="restaurant-info">
         <div className="restaurant-img">
-          <a href="#">
+         
             <img
               className=" restaurant-img-link "
               src={restaurant.photos[0].links[0]}
               alt=" "
             />
-          </a>
+
         </div>
         <div className=" restaurant-text-info ">
           <div className=" restaurant-text-Title-favoriteIcon ">
             <h3 className=" restaurant-title ">
-              <a href=" # ">{restaurant.name}</a>
+              {restaurant.name}
             </h3>
             <div className=" favoriteIcon ">
               <img src={favoriteIcon} alt=" " />
