@@ -348,7 +348,7 @@ Not supports in Firefox and IE */
 
 .Popular-restaurant-info {
   width: 223.09px;
-  height: 328px;
+  height: 308px;
   top: 266px;
   background: #ffffff;
   border: 0.5px solid #efefef;
@@ -404,14 +404,10 @@ Not supports in Firefox and IE */
 }
 
 .Popular-restaurant-title {
-  margin: 11px 0px 8px 0;
-
+  margin: 6px 0px 8px 0;
+  height: 45px;
   /* background-color: beige; */
   width: 191px;
-}
-
-a {
-  text-decoration: none;
 }
 
 .Popular-restaurant-title a {

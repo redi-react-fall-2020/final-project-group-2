@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 const OpenNowSelector = () => {
-  const [price, setPrice] = useState([]);
-
-  const handleGameChange = (e) => {
-    setGame(e.target.value);
-  };
   return (
-    <select className="filterSelect" onChange={handleGameChange}>
+    <select className="filterSelect">
       <option selected>Open Now</option>
       <option value="1">$</option>
       <option value="2">$$</option>

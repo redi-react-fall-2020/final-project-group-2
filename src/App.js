@@ -8,7 +8,7 @@ import mexican from "./img/mexican.svg";
 import thai from "./img/thai.svg";
 import turkish from "./img/turkish.svg";
 import Restaurants from "./components/Restaurants";
-import RestaurantDetail from "./components/RestaurantDetail";
+import RestaurantDetail from "./components/RestaurantDetails";
 import "./App.css";
 import LandingPage from "./LandingPage";
 import "./App.css";
@@ -67,7 +67,7 @@ function App() {
             <Restaurants logo={logo} />
           </Route>
           <Route exact path="/restaurants/berlin/:id">
-            <RestaurantDetail logo={logo} />
+            <RestaurantDetail />
           </Route>
         </Switch>
       </Router>

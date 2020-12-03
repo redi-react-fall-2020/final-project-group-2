@@ -7,6 +7,7 @@ import TopRated from "./TopRated";
 import MapView from "../MapView";
 
 import RestaurantsContext from "../contexts/restaurantsContext";
+import TopRated from "./TopRated";
 
 const Restaurants = ({ logo }) => {
   const { restaurants, setRestaurants } = useContext(RestaurantsContext);
@@ -28,12 +29,13 @@ const Restaurants = ({ logo }) => {
         <Header logo={logo} />
         <div id="resultsDiv">
           <div id="listOfRestautants">
-            <Filters restaurants={restaurants} />
+            <Filters />
             <RestaurantListings restaurants={restaurants} />
-            <TopRated restaurants={restaurants} />
-          </div>
-          <div className="mapView">
-            <MapView restaurants={restaurants} />
+
+            <TopRated restaurants={restaurants}/>
+            <div className="mapView">
+              <MapView restaurants={restaurants} />
+            </div>
           </div>
         </div>
       </div>
