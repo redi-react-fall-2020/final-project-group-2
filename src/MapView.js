@@ -1,17 +1,12 @@
 import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-
-
-// import * as resto from "./data/restaurant.json";
+import { useHistory } from "react-router-dom";
 import "./App.css";
-import restaurant from "./components/RestaurantCard";
-
 
 export default function MapView({ restaurants }) {
-  console.log(restaurants);
   const [activePark, setActivePark] = React.useState(null);
-/* console.log(results.results[0].geometry.location.lat); */
-  
+  let history = useHistory();
+
   return (
     <MapContainer center={[52.51366387010728, 13.46198092010728]} zoom={13}>
       <TileLayer
@@ -25,14 +20,18 @@ export default function MapView({ restaurants }) {
             restaurant.geometry.location.lat,
             restaurant.geometry.location.lng,
           ]}
-          onClick={() => {
-            setActivePark(restaurant);
-          
+          // onClick={() => {
+          //   setActivePark(restaurant);
+          // }}
+          eventHandlers={{
+            click: () => {
+              history.push(`/restaurants/berlin/${restaurant.id}`);
+            },
           }}
         />
       ))}
 
-      {activePark && (
+      {/* {activePark && (
         <Popup
           position={[
             restaurant.geometry.location.lat,
@@ -48,7 +47,7 @@ export default function MapView({ restaurants }) {
             <p>Rating: {activePark.rating}</p>
           </div>
         </Popup>
-      )}
+      )} */}
     </MapContainer>
   );
 }
