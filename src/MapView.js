@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import "./App.css";
 
 export default function MapView({ restaurants }) {
-  const [activePark, setActivePark] = React.useState(null);
   let history = useHistory();
 
   return (
@@ -20,9 +19,6 @@ export default function MapView({ restaurants }) {
             restaurant.geometry.location.lat,
             restaurant.geometry.location.lng,
           ]}
-          // onClick={() => {
-          //   setActivePark(restaurant);
-          // }}
           eventHandlers={{
             click: () => {
               history.push(`/restaurants/berlin/${restaurant.id}`);
@@ -30,24 +26,6 @@ export default function MapView({ restaurants }) {
           }}
         />
       ))}
-
-      {/* {activePark && (
-        <Popup
-          position={[
-            restaurant.geometry.location.lat,
-            restaurant.geometry.location.lng,
-          ]}
-          onClose={() => {
-            setActivePark(null);
-          }}
-        >
-          <div>
-            <h2>{activePark.name}</h2>
-            <p>{activePark.formatted_address}</p>
-            <p>Rating: {activePark.rating}</p>
-          </div>
-        </Popup>
-      )} */}
     </MapContainer>
   );
 }
