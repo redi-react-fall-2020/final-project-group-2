@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Filters = () => {
+const Filters = ({ restaurants }) => {
+  const [selectedPrice, setSelectedPrice] = useState();
+  const [resto, setResto] = useState([]);
+
+  useEffect(() => {
+    const result = restaurants.filter(
+      (item) => item.price_level == selectedPrice
+    );
+    setResto(result);
+  }, [selectedPrice]);
+
+  const handleGameChange = (e) => {
+    setSelectedPrice(e.target.value);
+  };
+
+  console.log("resto: ", resto, resto.length);
+
   return (
     <div className="filterArea">
       <div className="selectWrapper">
-        <select className="filterSelect">
+        <select className="filterSelect" onChange={handleGameChange}>
           <option default>Price</option>
           <option value="1">$</option>
           <option value="2">$$</option>

@@ -1,17 +1,17 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
-import Restaurants from "./Restaurants";
 
 const RestaurantListings = ({ restaurants }) => {
   return (
     <div className="results-for-restaurants">
       <div className="sectionTitle">
-        <h2>
-          Italian restaurants in <span>Berlin</span>{" "}
-        </h2>
+        {restaurants && (
+          <h2 style={{ marginBottom: "10px", marginLeft: "15px" }}>
+            Restaurants in Berlin{" "}
+          </h2>
+        )}
       </div>
-      {restaurants.map(
-        (restaurant) => (
+      {restaurants.map((restaurant) => (
         <RestaurantCard key={restaurant.id} restaurant={restaurant} />
       ))}
     </div>

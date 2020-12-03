@@ -11,21 +11,19 @@ const RestaurantCard = ({ restaurant }) => {
     <Link to={`/restaurants/berlin/${restaurant.id}`}>
       <div className="restaurant-info">
         <div className="restaurant-img">
-         
-            <img
-              className=" restaurant-img-link "
-              src={restaurant.photos[0].links[0]}
-              alt=" "
-            />
-
+          <img
+            className="restaurant-img-link "
+            src={restaurant.photos[0].links[0]}
+            alt="restaurantImg"
+          />
         </div>
         <div className=" restaurant-text-info ">
           <div className=" restaurant-text-Title-favoriteIcon ">
-            <h3 className=" restaurant-title ">
+            <h3 className="restaurant-title" style={{ color: "#000" }}>
               {restaurant.name}
             </h3>
             <div className=" favoriteIcon ">
-              <img src={favoriteIcon} alt=" " />
+              <img src={favoriteIcon} alt="favoriteIcon" />
             </div>
           </div>
           <div className=" restaurant-adress ">
@@ -36,13 +34,13 @@ const RestaurantCard = ({ restaurant }) => {
           <div className=" restaurant-rating-scoreVar ">
             <div className=" restaurant-rating ">
               <img
-                className=" rating-score"
+                className="rating-score"
                 style={{ width: (restaurant.rating * 100) / 5 + "%" }}
                 src={ratingscore}
                 alt=" "
               />
             </div>
-            <div className=" rateScorVar ">{restaurant.rating}</div>
+            <div className="rateScorVar">{restaurant.rating}</div>
           </div>
 
           <div className=" restaurant-description ">
