@@ -40,7 +40,7 @@ const TopRated = ({ restaurants }) => {
           </div>
         </div> */}
         {topRestaurants.map((restaurant) => (
-          <Link to={`/restaurants/berlin/${restaurant.id}`}>
+          <Link to={`/restaurants/berlin/${restaurant.id}`} key={restaurant.id}>
             <div className="Popular-restaurant-info" key={restaurant.name}>
               <div className="Popular-restaurant-img">
                 <img

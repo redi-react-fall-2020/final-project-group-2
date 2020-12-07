@@ -6,6 +6,8 @@ import CategorySelector from "./components/CategorySelector";
 import SearchBar from "./components/SearchBar";
 import ViewRestaurants from "./components/ViewRestaurants";
 
+// import QueryContext from "./contexts/queryContext";
+
 const LandingPage = ({ isSelected, handleCategoryClicked, cuisines }) => {
   return (
     <div className="App">

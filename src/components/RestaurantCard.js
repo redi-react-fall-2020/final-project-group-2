@@ -5,6 +5,7 @@ import adressIcon from "../img/adressIcon.svg";
 import ratingscore from "../img/ratingscore.svg";
 import phoneIcon from "../img/phoneIcon.svg";
 import openNowIcon from "../img/Open-now-Icon.svg";
+import PriceLevel from "./PriceLevel";
 
 const RestaurantCard = ({ restaurant }) => {
   return (
@@ -40,7 +41,8 @@ const RestaurantCard = ({ restaurant }) => {
                 alt=" "
               />
             </div>
-            <div className="rateScorVar">{restaurant.rating}</div>
+            <div className="rateScorVar">{restaurant.rating} </div>{" "}
+            <PriceLevel level={restaurant.price_level} />
           </div>
 
           <div className=" restaurant-description ">

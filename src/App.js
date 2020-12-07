@@ -14,6 +14,7 @@ import LandingPage from "./LandingPage";
 import "./App.css";
 
 import RestaurantsContext from "./contexts/restaurantsContext";
+import QueryContext from "./contexts/queryContext";
 
 function App() {
   const [cuisines, setCuisines] = useState([
@@ -26,7 +27,10 @@ function App() {
   ]);
   const [selectedCategories, setSelectedCategories] = useState(["chinese"]);
   const [restaurants, setRestaurants] = useState([]);
+  const [query, setQuery] = useState("");
+
   const value = { restaurants, setRestaurants };
+  const queryValue = { query, setQuery };
 
   const isSelected = (name) => {
     //checks if the name is include
@@ -47,30 +51,28 @@ function App() {
     });
   };
 
-  // const updateRestaurants = (list) => {
-  //   setRestuarants(list);
-  // };
-
   return (
     <RestaurantsContext.Provider value={value}>
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <LandingPage
-              isSelected={isSelected}
-              handleCategoryClicked={handleCategoryClicked}
-              cuisines={cuisines}
-              selectedCategories={selectedCategories}
-            />
-          </Route>
-          <Route exact path="/restaurants/berlin">
-            <Restaurants logo={logo} />
-          </Route>
-          <Route exact path="/restaurants/berlin/:id">
-            <RestaurantDetail logo={logo} />
-          </Route>
-        </Switch>
-      </Router>
+      <QueryContext.Provider value={queryValue}>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <LandingPage
+                isSelected={isSelected}
+                handleCategoryClicked={handleCategoryClicked}
+                cuisines={cuisines}
+                selectedCategories={selectedCategories}
+              />
+            </Route>
+            <Route exact path="/restaurants/berlin">
+              <Restaurants logo={logo} />
+            </Route>
+            <Route exact path="/restaurants/berlin/:id">
+              <RestaurantDetail logo={logo} />
+            </Route>
+          </Switch>
+        </Router>
+      </QueryContext.Provider>
     </RestaurantsContext.Provider>
   );
 }

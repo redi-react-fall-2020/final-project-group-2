@@ -7,7 +7,9 @@ const ViewRestaurants = () => {
     <>
       <ViewRestaurantText>
         or view <strong>popular restaurants</strong> in{" "}
-        <Link to="/restaurants/berlin">Berlin</Link>
+        <Link to="/restaurants/berlin">
+          <strong>Berlin</strong>
+        </Link>
       </ViewRestaurantText>
     </>
   );
