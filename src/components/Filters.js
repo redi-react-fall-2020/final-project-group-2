@@ -20,7 +20,7 @@ const Filters = ({
           <option value="4">$$$$</option>
         </select>
 
-        <label>
+        <label className="filterSelect labelRadio">
           <input
             type="checkbox"
             name="pickup"
@@ -29,7 +29,7 @@ const Filters = ({
           />
           Pickup
         </label>
-        <label>
+        <label className="filterSelect labelRadio">
           <input
             type="checkbox"
             name="delivery"
@@ -38,7 +38,7 @@ const Filters = ({
           />
           Delivery
         </label>
-        <label>
+        <label className="filterSelect labelRadio">
           <input
             type="checkbox"
             name="open"

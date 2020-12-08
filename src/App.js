@@ -9,6 +9,7 @@ import thai from "./img/thai.svg";
 import turkish from "./img/turkish.svg";
 import Restaurants from "./components/Restaurants";
 import RestaurantDetail from "./components/RestaurantDetail";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import "./App.css";
 import LandingPage from "./LandingPage";
 import "./App.css";
@@ -17,6 +18,9 @@ import RestaurantsContext from "./contexts/restaurantsContext";
 import QueryContext from "./contexts/queryContext";
 
 function App() {
+
+  const [globalStyle, setGlobalStyle] = useState("dark");
+  
   const [cuisines, setCuisines] = useState([
     { name: "italian", image: italian },
     { name: "chinese", image: chinese },
@@ -31,6 +35,14 @@ function App() {
 
   const value = { restaurants, setRestaurants };
   const queryValue = { query, setQuery };
+
+  const toggelTheme = () => {
+    if (globalStyle === "light") {
+      setGlobalStyle("dark");
+    } else {
+      setGlobalStyle("light");
+    }
+  };
 
   const isSelected = (name) => {
     //checks if the name is include
@@ -52,6 +64,8 @@ function App() {
   };
 
   return (
+<ThemeProvider theme={{ mode: globalStyle}} >
+<GlobalStyle />
     <RestaurantsContext.Provider value={value}>
       <QueryContext.Provider value={queryValue}>
         <Router>
@@ -74,7 +88,19 @@ function App() {
         </Router>
       </QueryContext.Provider>
     </RestaurantsContext.Provider>
+</ThemeProvider>
+    
   );
 }
 
 export default App;
+
+
+
+
+export const GlobalStyle = createGlobalStyle`
+  body{
+    background-color: ${(props) =>
+      props.theme.mode === "dark" ? "#41334f" : "#ececec"};
+    color: ${(props) => (props.theme.mode === "dark" ? "#ececec" : "#41334f")};
+ }`;
