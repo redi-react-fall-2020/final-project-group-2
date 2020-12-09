@@ -78,7 +78,7 @@ export const ListCategories = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
-  padding: 50px 0px;
+  padding: 20px 0px 0px 0px;
 `;
 
 export const HeadingText = styled.p`
