@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Label, Select} from '../StyledComp';
 const Filters = ({
   selectedFilters,
   setSelectedFilter,
@@ -9,8 +9,8 @@ const Filters = ({
   return (
     <div className="filterArea">
       <div className="selectWrapper">
-        <select
-          className="filterSelect"
+        <Select
+        
           onChange={(e) => handleChange("price_level", e.target.value)}
         >
           <option default>Price</option>
@@ -18,9 +18,9 @@ const Filters = ({
           <option value="2">$$</option>
           <option value="3">$$$</option>
           <option value="4">$$$$</option>
-        </select>
+        </Select>
 
-        <label className="filterSelect labelRadio">
+        <Label >
           <input
             type="checkbox"
             name="pickup"
@@ -28,8 +28,8 @@ const Filters = ({
             onChange={(e) => handleChange("pickup", e.target.checked)}
           />
           Pickup
-        </label>
-        <label className="filterSelect labelRadio">
+        </Label>
+        <Label >
           <input
             type="checkbox"
             name="delivery"
@@ -37,8 +37,8 @@ const Filters = ({
             onChange={(e) => handleChange("delivery", e.target.checked)}
           />
           Delivery
-        </label>
-        <label className="filterSelect labelRadio">
+        </Label>
+        <Label >
           <input
             type="checkbox"
             name="open"
@@ -46,20 +46,7 @@ const Filters = ({
             onChange={(e) => handleChange("open", e.target.checked)}
           />
           Open Now
-        </label>
-        {/* 
-        <select className="filterSelect">
-          <option default>By rating</option>
-          <option value="1">$</option>
-          <option value="2">$$</option>
-          <option value="3">$$$</option>
-        </select>
-        <select className="filterSelect">
-          <option default>Delivery</option>
-          <option value="1">$</option>
-          <option value="2">$$</option>
-          <option value="3">$$$</option>
-        </select> */}
+        </Label>
       </div>
     </div>
   );

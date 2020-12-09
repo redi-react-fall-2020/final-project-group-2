@@ -1,13 +1,14 @@
 import React from "react";
 import RestaurantCard from "./RestaurantCard";
+import {ResturantListingHeadingText} from "../StyledComp";
 
 const RestaurantListings = ({ restaurants }) => {
   return (
     <>
       <div className="sectionTitle">
-        <h2 style={{ marginBottom: "10px", marginLeft: "15px" }}>
+        <ResturantListingHeadingText>
           Restaurants in Berlin{" "}
-        </h2>
+        </ResturantListingHeadingText>
       </div>
 
       <div className="results-for-restaurants">

@@ -6,11 +6,12 @@ import ratingscore from "../img/ratingscore.svg";
 import phoneIcon from "../img/phoneIcon.svg";
 import openNowIcon from "../img/Open-now-Icon.svg";
 import PriceLevel from "./PriceLevel";
+import {RestaurantCardInfo,ResturantTitle,ResturantTelImg,ResturantGategoryTag} from '../StyledComp';
 
 const RestaurantCard = ({ restaurant }) => {
   return (
     <Link to={`/restaurants/berlin/${restaurant.id}`}>
-      <div className="restaurant-info">
+      <RestaurantCardInfo >
         <div className="restaurant-img">
           <img
             className="restaurant-img-link "
@@ -20,9 +21,9 @@ const RestaurantCard = ({ restaurant }) => {
         </div>
         <div className=" restaurant-text-info ">
           <div className=" restaurant-text-Title-favoriteIcon ">
-            <h3 className="restaurant-title" style={{ color: "#000" }}>
+            <ResturantTitle>
               {restaurant.name}
-            </h3>
+            </ResturantTitle>
             <div className=" favoriteIcon ">
               <img src={favoriteIcon} alt="favoriteIcon" />
             </div>
@@ -53,16 +54,15 @@ const RestaurantCard = ({ restaurant }) => {
           </div>
           <div className=" restaurant-tel-cuisine-openNow ">
             <div className=" restaurant-tel ">
-              <img
+              <ResturantTelImg
                 src={phoneIcon}
-                className="restaurant-tel-Icon"
                 alt="phoneIcon"
               />
               <p>{restaurant.social.phone}</p>
             </div>
-            <div className=" restaurant-category-tag ">
+            <ResturantGategoryTag >
               {restaurant.cuisine}
-            </div>
+            </ResturantGategoryTag>
 
             {restaurant.opening_hours.open_now && (
               <div className=" restaurant-OpenNow ">
@@ -88,7 +88,7 @@ const RestaurantCard = ({ restaurant }) => {
             )}
           </div>
         </div>
-      </div>
+      </RestaurantCardInfo>
     </Link>
   );
 };

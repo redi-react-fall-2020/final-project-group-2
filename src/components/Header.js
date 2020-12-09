@@ -1,17 +1,18 @@
 import React from "react";
-import { Address, AddressWraper } from "../StyledComp";
-import { Link } from "react-router-dom";
+import { HeaderWarper } from "../StyledComp";
 import SearchBar from "./SearchBar";
 
-const Header = ({ logo }) => {
+
+const Header = ({ logo}) => {
+  
   return (
-    <div className="header">
+    <HeaderWarper>
       <div id="logo">
         {" "}
         <img src={logo} alt="logo" />
       </div>
       <SearchBar />
-    </div>
+</HeaderWarper>
   );
 };
 

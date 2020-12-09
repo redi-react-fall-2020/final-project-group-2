@@ -5,9 +5,10 @@ import Filters from "./Filters";
 import RestaurantListings from "./RestaurantListings";
 import TopRated from "./TopRated";
 import MapView from "../MapView";
-
+import {Label, FiltersWraper,MapWraper} from "../StyledComp";
 import RestaurantsContext from "../contexts/restaurantsContext";
 import QueryContext from "../contexts/queryContext";
+import App from "../App";
 
 const Restaurants = ({ logo }) => {
   const { restaurants, setRestaurants } = useContext(RestaurantsContext);
@@ -83,13 +84,13 @@ const Restaurants = ({ logo }) => {
         <Header logo={logo} />
         <div id="resultsDiv">
           <div id="listOfRestautants">
-            <Filters
+           <FiltersWraper> <Filters
               selectedFilters={selectedFilters}
               setSelectedFilters={setSelectedFilters}
               handleChange={handleChange}
               resto={resto}
             />
-            <span onClick={clearFilters}>Clear filters</span>
+            <Label onClick={clearFilters}>Clear filters</Label></FiltersWraper>
             {resto.length >= 1 && <RestaurantListings restaurants={resto} />}
             {resto.length === 0 && (
               <RestaurantListings restaurants={restaurants} />
@@ -97,9 +98,9 @@ const Restaurants = ({ logo }) => {
 
             <TopRated restaurants={restaurants} />
           </div>
-          <div className="mapView">
+          <MapWraper>
             <MapView restaurants={restaurants} />
-          </div>
+          </MapWraper>
         </div>
       </div>
     </div>

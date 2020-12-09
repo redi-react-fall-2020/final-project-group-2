@@ -7,19 +7,20 @@ import indian from "./img/indian.svg";
 import mexican from "./img/mexican.svg";
 import thai from "./img/thai.svg";
 import turkish from "./img/turkish.svg";
+import sun from "./img/sun.svg";
+import moon from "./img/moon.svg";
 import Restaurants from "./components/Restaurants";
 import RestaurantDetail from "./components/RestaurantDetail";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import "./App.css";
 import LandingPage from "./LandingPage";
-import "./App.css";
-
+import {GlobalStyle} from "./StyledComp";
 import RestaurantsContext from "./contexts/restaurantsContext";
 import QueryContext from "./contexts/queryContext";
 
 function App() {
 
-  const [globalStyle, setGlobalStyle] = useState("dark");
+  const [globalStyle, setGlobalStyle] = useState("light");
   
   const [cuisines, setCuisines] = useState([
     { name: "italian", image: italian },
@@ -37,6 +38,7 @@ function App() {
   const queryValue = { query, setQuery };
 
   const toggelTheme = () => {
+   document.querySelector('.tumbler').classList.toggle('tumbler--night-mode')
     if (globalStyle === "light") {
       setGlobalStyle("dark");
     } else {
@@ -76,13 +78,27 @@ function App() {
                 handleCategoryClicked={handleCategoryClicked}
                 cuisines={cuisines}
                 selectedCategories={selectedCategories}
-              />
+              /><div class="tumbler__wrapper">
+    <button onClick={toggelTheme} class="tumbler"></button>
+    <img style={{width:"12px"}} src={sun} alt="logo sun" />
+    <img style={{width:"12px"}} src={moon} alt="logo moon" />
+    </div>
             </Route>
             <Route exact path="/restaurants/berlin">
               <Restaurants logo={logo} />
+              <div class="tumbler__wrapper">
+    <button onClick={toggelTheme}class="tumbler"></button>
+    <img style={{width:"12px"}} src={sun} alt="logo sun" />
+    <img style={{width:"12px"}} src={moon} alt="logo moon" />
+    </div>
             </Route>
             <Route exact path="/restaurants/berlin/:id">
               <RestaurantDetail logo={logo} />
+              <div class="tumbler__wrapper">
+    <button onClick={toggelTheme}class="tumbler"></button>
+    <img style={{width:"12px"}} src={sun} alt="logo sun" />
+    <img style={{width:"12px"}} src={moon} alt="logo moon" />
+    </div>
             </Route>
           </Switch>
         </Router>
@@ -95,12 +111,3 @@ function App() {
 
 export default App;
 
-
-
-
-export const GlobalStyle = createGlobalStyle`
-  body{
-    background-color: ${(props) =>
-      props.theme.mode === "dark" ? "#41334f" : "#ececec"};
-    color: ${(props) => (props.theme.mode === "dark" ? "#ececec" : "#41334f")};
- }`;

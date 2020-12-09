@@ -1,14 +1,14 @@
 import React from "react";
-import { ViewRestaurantText, AnchorTag } from "../StyledComp";
+import { ViewRestaurantText, AnchorTagBold } from "../StyledComp";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const ViewRestaurants = () => {
   return (
     <>
       <ViewRestaurantText>
-        or view <strong>popular restaurants</strong> in{" "}
+        or view <AnchorTagBold>popular restaurants</AnchorTagBold> in{" "}
         <Link to="/restaurants/berlin">
-          <strong>Berlin</strong>
+          <AnchorTagBold>Berlin</AnchorTagBold>
         </Link>
       </ViewRestaurantText>
     </>

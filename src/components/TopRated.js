@@ -4,7 +4,7 @@ import ratingscore from "../img/ratingscore.svg";
 import openNowIcon from "../img/Open-now-Icon.svg";
 import navLeft from "../img/navLeft.svg";
 import navRight from "../img/navRight.svg";
-
+import {ResturantListingHeadingText,MostPopularResturant} from "../StyledComp";
 const TopRated = ({ restaurants }) => {
   const topRestaurants = restaurants
     .sort((a, b) => b.rating - a.rating)
@@ -12,8 +12,8 @@ const TopRated = ({ restaurants }) => {
 
   return (
     <div className="Popular-Restaurants">
-      <div className="Popular-sectionTitle">
-        <h2>Most Rated restaurants in Berlin </h2>
+      <div >
+        <ResturantListingHeadingText>Most Rated restaurants in Berlin </ResturantListingHeadingText>
       </div>
       <div className="Popular-Restaurants-wrapper">
         <div className="navIcon">
@@ -41,7 +41,7 @@ const TopRated = ({ restaurants }) => {
         </div> */}
         {topRestaurants.map((restaurant) => (
           <Link to={`/restaurants/berlin/${restaurant.id}`} key={restaurant.id}>
-            <div className="Popular-restaurant-info" key={restaurant.name}>
+            <MostPopularResturant key={restaurant.name}>
               <div className="Popular-restaurant-img">
                 <img
                   className=" Popular-restaurant-img-link "
@@ -105,7 +105,7 @@ const TopRated = ({ restaurants }) => {
                   )}
                 </div>
               </div>
-            </div>
+            </MostPopularResturant>
           </Link>
         ))}
       </div>

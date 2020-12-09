@@ -14,7 +14,7 @@ import italian from "../img/Italian.svg";
 import chinese from "../img/chinese.svg";
 import indian from "../img/indian.svg";
 import "../img/restaurantDetailStyle.css";
-
+import {ResturantListingHeadingText, AnchorTagBold} from "../StyledComp";
 const RestaurantDetail = ({ logo }) => {
   const { restaurants } = useContext(RestaurantsContext);
   const { id } = useParams();
@@ -43,7 +43,7 @@ const RestaurantDetail = ({ logo }) => {
                 <div className="goBackBtn">
                   <Link to="/restaurants/berlin/">
                     <img src={backIcon} alt="backIcon" />
-                    <span> Back </span>
+                    <AnchorTagBold> Back </AnchorTagBold>
                   </Link>
                 </div>
                 {/* <!-- END of Go back Button -->
@@ -70,7 +70,7 @@ const RestaurantDetail = ({ logo }) => {
 
                     <!-- start Restaurant Title --> */}
                 <div className="restaurantTitle">
-                  <h2>{selectedRestaurant.name}</h2>
+                  <ResturantListingHeadingText>{selectedRestaurant.name}</ResturantListingHeadingText>
                 </div>
                 {/* <!-- END Restaurant Title -->
 
@@ -152,6 +152,7 @@ const RestaurantDetail = ({ logo }) => {
 
 
                     <!-- start Restaurant Description --> */}
+                    <br/>
                 <div className="restaurantDescription">
                   <p style={{ paddingTop: "10px", paddingBottom: "10px" }}>
                     Entdecken Sie unser Menü und bestellen Sie direkt auf der
@@ -163,6 +164,7 @@ const RestaurantDetail = ({ logo }) => {
                 {/* <!-- End Restaurant Description -->
 
                     <!-- start Restaurant Address --> */}
+                    <br/>
                 <div className="restaurant-Address">
                   <img
                     className="Img-Icon"
@@ -176,6 +178,7 @@ const RestaurantDetail = ({ logo }) => {
                 {/* <!-- END Restaurant Address -->
 
                     <!-- start Restaurant Phone Number --> */}
+                    <br/>
                 <div className="restaurant-tel ">
                   <img
                     className="Img-Icon"
@@ -191,6 +194,7 @@ const RestaurantDetail = ({ logo }) => {
                 {/* <!-- END Restaurant Phone Number -->
 
                     <!-- start Restaurant OpningTime --> */}
+                    <br/>
                 <div className="restaurant-OpningTime">
                   <img className="Img-Icon" src={openNowIcon} alt="openNow" />
                   <div className="textInfo" className="openFromTo">
@@ -212,6 +216,7 @@ const RestaurantDetail = ({ logo }) => {
             </div>
           </div>
         </div>
+      
       )}
     </>
   );

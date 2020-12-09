@@ -62,3 +62,59 @@ a {
 .labelRadio input {
     margin-right: 5px;
 }
+
+
+/*Here Is Dark Mode Btn*/
+
+.tumbler__wrapper {
+    margin-left: auto;
+    margin-right: 15px;
+    width: 35px;
+    height: 30px;
+    background-color: rgb(48, 32, 105);
+    border-radius: 30px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0 6px;
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.tumbler__wrapper svg {
+    width: 15px;
+    height: 15px;
+}
+
+.tumbler {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-transition: background-color 0.5s, -webkit-transform 0.5s;
+    transition: background-color 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, background-color 0.5s;
+    transition: transform 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+    will-change: transform;
+}
+
+.tumbler--night-mode {
+    -webkit-transform: translateX(calc(100% - 2px));
+    transform: translateX(calc(100% - 2px));
+}
+
+.credits {
+    display: none;
+}
+
+.sun-svg,
+.moon-svg {
+    display: none;
+}
