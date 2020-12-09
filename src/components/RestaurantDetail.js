@@ -11,10 +11,13 @@ import openNowIcon from "../img/Open-now-Icon.svg";
 import halal from "../img/halal.svg";
 import pickupIcon from "../img/pickup.svg";
 import italian from "../img/Italian.svg";
-import chinese from "../img/chinese.svg";
-import indian from "../img/indian.svg";
 import "../img/restaurantDetailStyle.css";
-import {ResturantListingHeadingText, AnchorTagBold} from "../StyledComp";
+import {
+  ResturantListingHeadingText,
+  AnchorTagBold,
+  MapWraper,
+} from "../StyledComp";
+
 const RestaurantDetail = ({ logo }) => {
   const { restaurants } = useContext(RestaurantsContext);
   const { id } = useParams();
@@ -51,14 +54,6 @@ const RestaurantDetail = ({ logo }) => {
                     <!-- START Image Slider --> */}
 
                 <div className="imgSliderDiv">
-                  {/* <div className="imgNav">
-                    <div className="leftBtn">
-                      <img src="" alt="" />
-                    </div>
-                    <div className="RightBtn">
-                      <img src="" alt="" />
-                    </div>
-                  </div> */}
                   <img
                     className="imgSlider"
                     src={selectedRestaurant.photos[0].links[0]}
@@ -70,7 +65,9 @@ const RestaurantDetail = ({ logo }) => {
 
                     <!-- start Restaurant Title --> */}
                 <div className="restaurantTitle">
-                  <ResturantListingHeadingText>{selectedRestaurant.name}</ResturantListingHeadingText>
+                  <ResturantListingHeadingText>
+                    {selectedRestaurant.name}
+                  </ResturantListingHeadingText>
                 </div>
                 {/* <!-- END Restaurant Title -->
 
@@ -152,7 +149,7 @@ const RestaurantDetail = ({ logo }) => {
 
 
                     <!-- start Restaurant Description --> */}
-                    <br/>
+                <br />
                 <div className="restaurantDescription">
                   <p style={{ paddingTop: "10px", paddingBottom: "10px" }}>
                     Entdecken Sie unser Menü und bestellen Sie direkt auf der
@@ -164,7 +161,7 @@ const RestaurantDetail = ({ logo }) => {
                 {/* <!-- End Restaurant Description -->
 
                     <!-- start Restaurant Address --> */}
-                    <br/>
+                <br />
                 <div className="restaurant-Address">
                   <img
                     className="Img-Icon"
@@ -178,7 +175,7 @@ const RestaurantDetail = ({ logo }) => {
                 {/* <!-- END Restaurant Address -->
 
                     <!-- start Restaurant Phone Number --> */}
-                    <br/>
+                <br />
                 <div className="restaurant-tel ">
                   <img
                     className="Img-Icon"
@@ -194,7 +191,7 @@ const RestaurantDetail = ({ logo }) => {
                 {/* <!-- END Restaurant Phone Number -->
 
                     <!-- start Restaurant OpningTime --> */}
-                    <br/>
+                <br />
                 <div className="restaurant-OpningTime">
                   <img className="Img-Icon" src={openNowIcon} alt="openNow" />
                   <div className="textInfo" className="openFromTo">
@@ -209,14 +206,16 @@ const RestaurantDetail = ({ logo }) => {
 
                 <!-- START of left side (mapView) --> */}
               {/* <div className="mapView"></div> */}
-              <div className="mapView">
+
+              <MapView restaurants={[selectedRestaurant]} />
+
+              {/* <div className="mapView">
                 <MapView restaurants={restaurants} />
-              </div>
+              </div> */}
               {/* <!-- END of left side (mapView) --> */}
             </div>
           </div>
         </div>
-      
       )}
     </>
   );
