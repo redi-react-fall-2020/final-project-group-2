@@ -5,7 +5,7 @@ import Filters from "./Filters";
 import RestaurantListings from "./RestaurantListings";
 import TopRated from "./TopRated";
 import MapView from "../MapView";
-import {Label, FiltersWraper,MapWraper} from "../StyledComp";
+import { Label, FiltersWraper, MapWraper } from "../StyledComp";
 import RestaurantsContext from "../contexts/restaurantsContext";
 import QueryContext from "../contexts/queryContext";
 import App from "../App";
@@ -84,13 +84,16 @@ const Restaurants = ({ logo }) => {
         <Header logo={logo} />
         <div id="resultsDiv">
           <div id="listOfRestautants">
-           <FiltersWraper> <Filters
-              selectedFilters={selectedFilters}
-              setSelectedFilters={setSelectedFilters}
-              handleChange={handleChange}
-              resto={resto}
-            />
-            <Label onClick={clearFilters}>Clear filters</Label></FiltersWraper>
+            <FiltersWraper>
+              {" "}
+              <Filters
+                selectedFilters={selectedFilters}
+                setSelectedFilters={setSelectedFilters}
+                handleChange={handleChange}
+                resto={resto}
+              />
+              <Label onClick={clearFilters}>Clear filters</Label>
+            </FiltersWraper>
             {resto.length >= 1 && <RestaurantListings restaurants={resto} />}
             {resto.length === 0 && (
               <RestaurantListings restaurants={restaurants} />
