@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./img/logo.svg";
-import { HeadingText, ListCategories, AppTheme} from "./StyledComp";
+import { HeadingText, ListCategories, AppTheme } from "./StyledComp";
 
 import CategorySelector from "./components/CategorySelector";
 import SearchBar from "./components/SearchBar";
@@ -10,12 +10,13 @@ import ViewRestaurants from "./components/ViewRestaurants";
 
 const LandingPage = ({ isSelected, handleCategoryClicked, cuisines }) => {
   return (
-    <AppTheme >
+    <AppTheme>
       <div className="content-container">
         <img src={logo} className="App-logo" alt="logo" />
         <HeadingText>
-          <strong>Support </strong>Local Restuarant,
-          <br />Eat&nbsp;
+          <strong>Support </strong>Local Restaurant,
+          <br />
+          Eat&nbsp;
           <strong style={{ textDecoration: "underline" }}>
             {" "}
             Great Food

@@ -111,8 +111,11 @@ export const Address = styled.input`
   min-width: 100%;
   background: ${(props) =>
     props.theme.mode === "dark" ? darkMode.searchBar : lightMode.secondary};
-  box-shadow: 0.2px 0.2px 10px 0.2px #ccc;
+  box-shadow: ${(props) =>
+    props.theme.mode === "dark" ? "none" : "0.2px 0.2px 10px 0.2px #ccc"};
+  {"" /* box-shadow: 0.2px 0.2px 10px 0.2px #ccc; */}
   padding-inline-start: 15px;
+  outline: none;
 `;
 
 export const ViewRestaurantText = styled.p`
@@ -129,6 +132,7 @@ export const AnchorTag = styled.a`
 export const AnchorTagBold = styled.strong`
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
+  text-decoration: underline;
 `;
 
 export const FiltersWraper = styled.div`
@@ -183,6 +187,7 @@ export const ResturantListingHeadingText = styled.h2`
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.white : lightMode.primary};
   margin: 20px 0px;
+  padding-left: 30px;
 `;
 
 export const ResturantTitle = styled.h3`

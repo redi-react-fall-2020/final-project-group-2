@@ -14,14 +14,13 @@ import RestaurantDetail from "./components/RestaurantDetail";
 import { ThemeProvider } from "styled-components";
 import "./App.css";
 import LandingPage from "./LandingPage";
-import {GlobalStyle} from "./StyledComp";
+import { GlobalStyle } from "./StyledComp";
 import RestaurantsContext from "./contexts/restaurantsContext";
 import QueryContext from "./contexts/queryContext";
 
 function App() {
-
   const [globalStyle, setGlobalStyle] = useState("light");
-  
+
   const [cuisines, setCuisines] = useState([
     { name: "italian", image: italian },
     { name: "chinese", image: chinese },
@@ -38,7 +37,7 @@ function App() {
   const queryValue = { query, setQuery };
 
   const toggelTheme = () => {
-   document.querySelector('.tumbler').classList.toggle('tumbler--night-mode')
+    document.querySelector(".tumbler").classList.toggle("tumbler--night-mode");
     if (globalStyle === "light") {
       setGlobalStyle("dark");
     } else {
@@ -66,48 +65,47 @@ function App() {
   };
 
   return (
-<ThemeProvider theme={{ mode: globalStyle}} >
-<GlobalStyle />
-    <RestaurantsContext.Provider value={value}>
-      <QueryContext.Provider value={queryValue}>
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <LandingPage
-                isSelected={isSelected}
-                handleCategoryClicked={handleCategoryClicked}
-                cuisines={cuisines}
-                selectedCategories={selectedCategories}
-              /><div class="tumbler__wrapper">
-    <button onClick={toggelTheme} class="tumbler"></button>
-    <img style={{width:"12px"}} src={sun} alt="logo sun" />
-    <img style={{width:"12px"}} src={moon} alt="logo moon" />
-    </div>
-            </Route>
-            <Route exact path="/restaurants/berlin">
-              <Restaurants logo={logo} />
-              <div class="tumbler__wrapper">
-    <button onClick={toggelTheme}class="tumbler"></button>
-    <img style={{width:"12px"}} src={sun} alt="logo sun" />
-    <img style={{width:"12px"}} src={moon} alt="logo moon" />
-    </div>
-            </Route>
-            <Route exact path="/restaurants/berlin/:id">
-              <RestaurantDetail logo={logo} />
-              <div class="tumbler__wrapper">
-    <button onClick={toggelTheme}class="tumbler"></button>
-    <img style={{width:"12px"}} src={sun} alt="logo sun" />
-    <img style={{width:"12px"}} src={moon} alt="logo moon" />
-    </div>
-            </Route>
-          </Switch>
-        </Router>
-      </QueryContext.Provider>
-    </RestaurantsContext.Provider>
-</ThemeProvider>
-    
+    <ThemeProvider theme={{ mode: globalStyle }}>
+      <GlobalStyle />
+      <RestaurantsContext.Provider value={value}>
+        <QueryContext.Provider value={queryValue}>
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <LandingPage
+                  isSelected={isSelected}
+                  handleCategoryClicked={handleCategoryClicked}
+                  cuisines={cuisines}
+                  selectedCategories={selectedCategories}
+                />
+                <div class="tumbler__wrapper">
+                  <button onClick={toggelTheme} class="tumbler"></button>
+                  <img style={{ width: "12px" }} src={sun} alt="logo sun" />
+                  <img style={{ width: "12px" }} src={moon} alt="logo moon" />
+                </div>
+              </Route>
+              <Route exact path="/restaurants/berlin">
+                <Restaurants logo={logo} />
+                <div class="tumbler__wrapper">
+                  <button onClick={toggelTheme} class="tumbler"></button>
+                  <img style={{ width: "12px" }} src={sun} alt="logo sun" />
+                  <img style={{ width: "12px" }} src={moon} alt="logo moon" />
+                </div>
+              </Route>
+              <Route exact path="/restaurants/berlin/:id">
+                <RestaurantDetail logo={logo} />
+                <div class="tumbler__wrapper">
+                  <button onClick={toggelTheme} class="tumbler"></button>
+                  <img style={{ width: "12px" }} src={sun} alt="logo sun" />
+                  <img style={{ width: "12px" }} src={moon} alt="logo moon" />
+                </div>
+              </Route>
+            </Switch>
+          </Router>
+        </QueryContext.Provider>
+      </RestaurantsContext.Provider>
+    </ThemeProvider>
   );
 }
 
 export default App;
-

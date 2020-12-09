@@ -206,9 +206,9 @@ const RestaurantDetail = ({ logo }) => {
 
                 <!-- START of left side (mapView) --> */}
               {/* <div className="mapView"></div> */}
-              <MapWraper style={{ width: "100%" }}>
-                <MapView restaurants={restaurants} />
-              </MapWraper>
+
+              <MapView restaurants={[selectedRestaurant]} />
+
               {/* <div className="mapView">
                 <MapView restaurants={restaurants} />
               </div> */}
