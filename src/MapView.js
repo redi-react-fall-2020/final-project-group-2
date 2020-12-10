@@ -1,7 +1,16 @@
 import React from "react";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { useHistory } from "react-router-dom";
+
 import "./App.css";
+import { Icon } from "leaflet";
+
+export const icon = new Icon({
+  /* iconUrl: "https://i.ibb.co/mTKZvCH/Icon-Shadow2.png", */
+  iconUrl: "https://i.ibb.co/m9NxqPt/resto-Icon.png",
+  shadowUrl: "https://unpkg.com/leaflet@1.6.0/dist/images/marker-shadow.png",
+  shadowAnchor: [-4, -5],
+});
 
 export default function MapView({ restaurants }) {
   let history = useHistory();
@@ -24,6 +33,7 @@ export default function MapView({ restaurants }) {
               history.push(`/restaurants/berlin/${restaurant.id}`);
             },
           }}
+          icon={icon}
         />
       ))}
     </MapContainer>

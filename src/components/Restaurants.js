@@ -105,8 +105,9 @@ const Restaurants = ({ logo, theme }) => {
 
             <TopRated restaurants={restaurants} />
           </div>
-
-          <MapView restaurants={restaurants} />
+          <MapWraper>
+            <MapView restaurants={restaurants} />
+          </MapWraper>
         </div>
       </div>
     </div>

@@ -3,8 +3,8 @@ import { Category, CuisineName } from "../StyledComp";
 
 const CategorySelector = ({ cuisine, isSelected, handleCategoryClicked }) => {
   return (
-    <div>
-      <Category
+    < div /* className = "category-wrapper" */ >
+      < Category className = "categoryImg"
         selected={isSelected(cuisine.name)}
         onClick={() => {
           handleCategoryClicked(cuisine.name);
