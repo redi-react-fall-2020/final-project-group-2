@@ -17,6 +17,7 @@ import {
   AnchorTagBold,
   MapWraper,
 } from "../StyledComp";
+import PriceLevel from "./PriceLevel";
 
 const RestaurantDetail = ({ logo }) => {
   const { restaurants } = useContext(RestaurantsContext);
@@ -87,7 +88,9 @@ const RestaurantDetail = ({ logo }) => {
                     </div>
                   </div>
                   <div className="divider"></div>
-                  <div className="restaurant-Price">€€€</div>
+                  <div className="restaurant-Price">
+                    <PriceLevel level={restaurant.price_level} />
+                  </div>
                   <div className="divider"></div>
                   {selectedRestaurant.opening_hours.open_now && (
                     <div className=" restaurant-OpenNow ">

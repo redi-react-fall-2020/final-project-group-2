@@ -46,7 +46,9 @@ const RestaurantCard = ({ restaurant }) => {
               />
             </div>
             <div className="rateScorVar">{restaurant.rating} </div>{" "}
-            <PriceLevel level={restaurant.price_level} />
+            <div className="rateScorVar">
+              <PriceLevel level={restaurant.price_level} />
+            </div>
           </div>
 
           <div className=" restaurant-description ">
