@@ -154,7 +154,7 @@ export const AnchorTag = styled.a `
 export const AnchorTagBold = styled.strong `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
-/*   text-decoration: underline; */
+  /*   text-decoration: underline; */
 `;
 
 export const FiltersWraper = styled.div `

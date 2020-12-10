@@ -4,20 +4,10 @@ import moon from "../img/moon.svg";
 
 const ThemeToggler = ({ toggelTheme }) => {
   return (
-    <div className="tumbler__wrapper">
-      <button onClick={toggelTheme} className="tumbler"></button>
-      <img
-        onClick={toggelTheme}
-        style={{ width: "12px" }}
-        src={sun}
-        alt="logo sun"
-      />
-      <img
-        onClick={toggelTheme}
-        style={{ width: "12px" }}
-        src={moon}
-        alt="logo moon"
-      />
+    <div className="tumbler__wrapper" onClick={toggelTheme}>
+      <button className="tumbler"></button>
+      <img style={{ width: "18px" }} src={sun} alt="logo sun" />
+      <img style={{ width: "18px" }} src={moon} alt="logo moon" />
     </div>
   );
 };

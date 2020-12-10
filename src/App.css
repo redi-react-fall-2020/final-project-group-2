@@ -6,7 +6,13 @@
 }
 
 .App {
-  background: linear-gradient(180.64deg, #f7f8fa 0.5%, #fafafc 46.6%, rgba(255, 255, 255, 0) 116.97%), url("./img/background.jpg");
+  background: linear-gradient(
+      180.64deg,
+      #f7f8fa 0.5%,
+      #fafafc 46.6%,
+      rgba(255, 255, 255, 0) 116.97%
+    ),
+    url("./img/background.jpg");
   background-size: cover;
   background-position: 100%;
   display: flex;
@@ -65,7 +71,6 @@ a {
 
 /*Here Is Dark Mode Btn*/
 
-
 .tumbler__wrapper svg {
   width: 15px;
   height: 15px;
@@ -119,4 +124,5 @@ a {
   display: none;
 }
 
-.berlin-restaurant {}
+.berlin-restaurant {
+}
