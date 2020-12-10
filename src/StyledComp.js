@@ -5,7 +5,7 @@ export const Category = styled.div`
   align-items: center;
   background: ${(props) =>
     props.theme.mode === "dark" ? darkMode.secondary : lightMode.secondary};
-  background-color: ${({ selected }) => (selected ? "#E79F9F" : "transparent")};
+  background-color: ${({ selected }) => (selected ? "#E79F9F" : null)};
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -87,17 +87,18 @@ export const ListCategories = styled.div`
   display: flex;
   justify-content: space-between;
   width: 90%;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0px;
   width: 722px;
 `;
 
 export const HeadingText = styled.p`
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
+
   font-size: 49px;
-  margin-bottom: 3rem;
-  inline-height: 33px;
-  margin-top: 6rem;
+  margin-bottom: 7rem;
+  line-height: 1.3em;
+  margin-top: 11rem;
 `;
 
 export const CuisineName = styled.p`
@@ -109,9 +110,9 @@ export const CuisineName = styled.p`
 `;
 
 export const AddressWraper = styled.div`
-  margin: 30px 25px;
+  margin: 40px 0px;
   height: 2.5rem;
-  min-width: 699px;
+  min-width: 710px;
   display: flex;
 `;
 export const Address = styled.input`
@@ -131,7 +132,9 @@ export const Address = styled.input`
 export const ViewRestaurantText = styled.p`
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
-  margin: 30px 30px;
+
+  font-size: 20px;
+  margin: -1px 0px;
 `;
 
 export const AnchorTag = styled.a`
@@ -142,7 +145,7 @@ export const AnchorTag = styled.a`
 export const AnchorTagBold = styled.strong`
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
-  text-decoration: underline;
+/*   text-decoration: underline; */
 `;
 
 export const FiltersWraper = styled.div`
@@ -172,6 +175,10 @@ export const Label = styled.label`
   text-decoration: none;
   border: none;
   outline: none;
+
+  & > input {
+    margin-right: 5px;
+  }
 `;
 export const Select = styled.select`
   color: ${(props) =>
@@ -195,9 +202,9 @@ export const Select = styled.select`
 
 export const ResturantListingHeadingText = styled.h2`
   color: ${(props) =>
-    props.theme.mode === "dark" ? darkMode.white : lightMode.primary};
+    props.theme.mode === "dark" ? darkMode.white : "#706969"};
   margin: 20px 0px;
-  padding-left: 30px;
+  font-weight: normal;
 `;
 
 export const ResturantTitle = styled.h3`

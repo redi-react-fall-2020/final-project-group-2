@@ -6,13 +6,13 @@
 }
 
 .App {
-    background: linear-gradient(180.64deg, #f7f8fa 0.5%, #fafafc 46.6%, rgba(255, 255, 255, 0) 116.97%), url("./img/background.jpg");
-    background-size: cover;
-    background-position: 100%;
-    display: flex;
-    padding-left: 40px;
-    width: 100vw;
-    height: 100vh;
+  background: linear-gradient(180.64deg, #f7f8fa 0.5%, #fafafc 46.6%, rgba(255, 255, 255, 0) 116.97%), url("./img/background.jpg");
+  background-size: cover;
+  background-position: 100%;
+  display: flex;
+  padding-left: 40px;
+  width: 100vw;
+  height: 100vh;
 }
 
 a {
@@ -28,7 +28,7 @@ a {
 }
 
 .App-logo {
-  height: 10vmin;
+  width: 179px;
   margin-top: 20px;
   pointer-events: none;
 }
@@ -72,42 +72,42 @@ a {
 }
 
 .tumbler {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    background-color: #fff;
-    transition: transform 0.5s, background-color 0.5s;
-    will-change: transform;
-    border: none;
-    text-decoration: none;
-    border-inline: none;
-    outline: none;
-    cursor: pointer;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.5s, background-color 0.5s;
+  will-change: transform;
+  border: none;
+  text-decoration: none;
+  border-inline: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .tumbler__wrapper {
-    margin-left: auto;
-    margin-right: 15px;
-    width: 44px;
-    margin-top: 31px;
-    height: 31px;
-    background-color: rgb(38 127 202);
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 6px;
-    cursor: pointer;
-    display: flex;
-    position: fixed;
-    top: 10px;
-    right: 10px;
+  margin-left: auto;
+  margin-right: 15px;
+  width: 44px;
+  margin-top: 31px;
+  height: 31px;
+  background-color: rgb(38 127 202);
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+  cursor: pointer;
+  display: flex;
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }
 
 .tumbler--night-mode {
-    -webkit-transform: translateX(calc(100% - -4px));
-    transform: translateX(calc(100% - -4px));
+  -webkit-transform: translateX(calc(100% - -4px));
+  transform: translateX(calc(100% - -4px));
 }
 
 .credits {
@@ -119,5 +119,4 @@ a {
   display: none;
 }
 
-.berlin-restaurant {
-}
+.berlin-restaurant {}

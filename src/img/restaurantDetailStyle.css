@@ -157,23 +157,23 @@
 
 .restaurant-Address {
     display: flex;
-    margin-bottom: 14px;
+    /*     margin-bottom: 14px; */
 }
 
 .restaurant-tel-Icon {
     color: #ff7f00;
-    padding-right: 15px;
+    padding-right: 10px;
+    width: 14px;
 }
-.restaurant-tel{
 
-}
+.restaurant-tel {}
 
 .restaurant-OpningTime {
     display: flex;
 }
 
 .openFromTo {
-    font-family: Roboto;
+    /*     font-family: Roboto; */
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -191,7 +191,7 @@
 }
 
 .textInfo {
-    font-family: Roboto;
+    /*     font-family: Roboto; */
     font-style: normal;
     font-weight: normal;
     font-size: 16px;

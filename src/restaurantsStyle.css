@@ -181,7 +181,9 @@ Not supports in Firefox and IE */
 }
 
 
-
+#logo {
+    margin-right: 100px;
+}
 
 
 .restaurant-title {
@@ -263,7 +265,7 @@ Not supports in Firefox and IE */
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    margin-bottom: 14px;
+    /* margin-bottom: 14px;*/
 }
 
 .restaurant-tel p {
