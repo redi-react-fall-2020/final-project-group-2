@@ -78,26 +78,27 @@ function App() {
                   cuisines={cuisines}
                   selectedCategories={selectedCategories}
                 />
-                <div class="tumbler__wrapper">
-                  <button onClick={toggelTheme} class="tumbler"></button>
-                  <img style={{ width: "12px" }} src={sun} alt="logo sun" />
-                  <img style={{ width: "12px" }} src={moon} alt="logo moon" />
+
+                <div class="tumbler__wrapper" onClick={toggelTheme}>
+                  <button class="tumbler"></button>
+                  <img style={{ width: "18px" }} src={sun} alt="logo sun" />
+                  <img style={{ width: "18px" }} src={moon} alt="logo moon" />
                 </div>
               </Route>
               <Route exact path="/restaurants/berlin">
                 <Restaurants logo={logo} />
-                <div class="tumbler__wrapper">
-                  <button onClick={toggelTheme} class="tumbler"></button>
-                  <img style={{ width: "12px" }} src={sun} alt="logo sun" />
-                  <img style={{ width: "12px" }} src={moon} alt="logo moon" />
+                <div class="tumbler__wrapper" onClick={toggelTheme}>
+                  <button class="tumbler"></button>
+                  <img style={{ width: "18px" }} src={sun} alt="logo sun" />
+                  <img style={{ width: "18px" }} src={moon} alt="logo moon" />
                 </div>
               </Route>
               <Route exact path="/restaurants/berlin/:id">
                 <RestaurantDetail logo={logo} />
-                <div class="tumbler__wrapper">
-                  <button onClick={toggelTheme} class="tumbler"></button>
-                  <img style={{ width: "12px" }} src={sun} alt="logo sun" />
-                  <img style={{ width: "12px" }} src={moon} alt="logo moon" />
+                <div class="tumbler__wrapper" onClick={toggelTheme}>
+                  <button class="tumbler"></button>
+                  <img style={{ width: "18px" }} src={sun} alt="logo sun" />
+                  <img style={{ width: "18px" }} src={moon} alt="logo moon" />
                 </div>
               </Route>
             </Switch>

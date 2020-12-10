@@ -14,15 +14,15 @@ Not supports in Firefox and IE */
 /* total width */
 
 #listOfRestautants::-webkit-scrollbar {
-    background-color: #bda4a4;
-    width: 12px;
+    background-color: #cec3c314;
+    width: 9px;
 }
 
 
 /* background of the scrollbar except button or resizer */
 
 #listOfRestautants::-webkit-scrollbar-track {
-    background-color: #fbfdff;
+    background-color: #242d4c08;
     border-radius: -5px;
 }
 
@@ -32,7 +32,7 @@ Not supports in Firefox and IE */
 #listOfRestautants::-webkit-scrollbar-thumb {
     background-color: #babac07d;
     border-radius: 16px;
-    border: 0.1px solid #fbfdffab;
+
 }
 
 
@@ -155,6 +155,8 @@ Not supports in Firefox and IE */
     border-radius: 26px;
 }
 
+.restaurant-img {}
+
 .restaurant-text-info {
     display: flex;
     flex-direction: column;
@@ -172,6 +174,15 @@ Not supports in Firefox and IE */
     margin-bottom: 12px;
     color: #808080;
 }
+
+.restaurant-adress img {
+
+    margin-right: 5px;
+}
+
+
+
+
 
 .restaurant-title {
     /* margin: 0px; */
@@ -252,6 +263,7 @@ Not supports in Firefox and IE */
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    margin-bottom: 14px;
 }
 
 .restaurant-tel p {
@@ -279,6 +291,8 @@ Not supports in Firefox and IE */
     line-height: 12px;
     color: #ffffff;
 }
+
+.restaurant-tel-Icon {}
 
 .restaurant-OpenNow {
     flex-direction: row;
@@ -315,7 +329,7 @@ Not supports in Firefox and IE */
     flex-direction: row;
     position: relative;
     width: 708px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .Popular-sectionTitle h2 span {
@@ -328,12 +342,16 @@ Not supports in Firefox and IE */
     justify-content: space-between;
 }
 
+.Popular-favoriteIcon {}
+
 .Popular-restaurant-img-link {
     width: 192px;
     height: 157px;
     object-fit: cover;
     border-radius: 26px;
 }
+
+.Popular-restaurant-img {}
 
 .Popular-restaurant-text-info {
     display: flex;
@@ -455,6 +473,8 @@ Not supports in Firefox and IE */
     color: #ffffff;
 }
 
+.Popular-restaurant-tel-Icon {}
+
 .Popular-restaurant-OpenNow {
     flex-direction: row;
     display: flex;
@@ -536,17 +556,39 @@ Not supports in Firefox and IE */
 }
 
 .categoryImg {
-    width: 97.05px;
-    height: 97.05px;
+
+    width: 47px;
+    height: 43px;
     box-shadow: -1px 8px 21px -10px rgba(0, 0, 0, 0.25);
     border-radius: 26px;
     background-color: #fdfeff;
     background-size: 53%;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.categoryImg:hover {
+    box-shadow: -1px 4px 30px -17px #000000;
 }
 
 .categoryText {
     margin-top: 14px;
     color: #8f6363;
+
+    width: 47px;
+    height: 43px;
+    box-shadow: -1px 8px 21px -10px rgba(0, 0, 0, 0.25);
+    border-radius: 26px;
+    background-color: #fdfeff;
+    background-size: 53%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.categoryText {
+    margin-top: 14px;
+    color: #8f6363;
+
 }
