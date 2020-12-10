@@ -1,7 +1,9 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, {
+  createGlobalStyle
+} from "styled-components";
 import CategorySelector from "./components/CategorySelector";
 
-export const Category = styled.div`
+export const Category = styled.div `
   align-items: center;
   background: ${(props) =>
     props.theme.mode === "dark" ? darkMode.secondary : lightMode.secondary};
@@ -32,21 +34,21 @@ const darkMode = {
   header: "#333D61",
 };
 
-export const MapWraper = styled.div`
+export const MapWraper = styled.div `
   background: ${(props) =>
     props.theme.mode === "dark" ? darkMode.mapImageUrl : lightMode.mapImageUrl};
   width: 100%;
   filter: ${(props) => (props.theme.mode === "dark" ? "invert(1)" : "none")};
 `;
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle `
   body{
     background-color: ${(props) =>
       props.theme.mode === "dark" ? "#242D4C" : "#ececec"};
     color: ${(props) => (props.theme.mode === "dark" ? "#ececec" : "#242D4C")};
  }`;
 
-export const HeaderWarper = styled.div`
+export const HeaderWarper = styled.div `
   background: ${(props) =>
     props.theme.mode === "dark" ? darkMode.header : lightMode.secondary};
   display: flex;
@@ -57,7 +59,7 @@ export const HeaderWarper = styled.div`
 
 }
 `;
-export const AppTheme = styled.div`
+export const AppTheme = styled.div `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : lightMode.primary};
   background: ${(props) =>
@@ -69,11 +71,18 @@ export const AppTheme = styled.div`
   width: 100vw;
   height: 100vh;
 `;
-export const RestaurantCardInfo = styled.div`
+export const RestaurantCardInfo = styled.div `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.white : lightMode.primary};
   background: ${(props) =>
-    props.theme.mode === "dark" ? darkMode.secondary : lightMode.secondary};
+  props.theme.mode === "dark" ? darkMode.secondary : lightMode.secondary};
+    
+  &: hover {
+    box - shadow: -1 px 1 px 9 px 0 px rgb(0 0 0 / 10 % );
+    background: ${(props) =>
+      props.theme.mode === "dark" ? "#505b84" : "#fbfdffeb"
+    }
+  }
   width: 694px;
   height: 180px;
   top: 266px;
@@ -83,7 +92,7 @@ export const RestaurantCardInfo = styled.div`
   margin-bottom: 12px;
   padding-left: 12px;
 `;
-export const ListCategories = styled.div`
+export const ListCategories = styled.div `
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -91,7 +100,7 @@ export const ListCategories = styled.div`
   width: 722px;
 `;
 
-export const HeadingText = styled.p`
+export const HeadingText = styled.p `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
 
@@ -101,7 +110,7 @@ export const HeadingText = styled.p`
   margin-top: 11rem;
 `;
 
-export const CuisineName = styled.p`
+export const CuisineName = styled.p `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
   margin-top: 10px;
@@ -109,13 +118,13 @@ export const CuisineName = styled.p`
   text-transform: capitalize;
 `;
 
-export const AddressWraper = styled.div`
+export const AddressWraper = styled.div `
   margin: 40px 0px;
   height: 2.5rem;
   min-width: 710px;
   display: flex;
 `;
-export const Address = styled.input`
+export const Address = styled.input `
   border: none;
   border-radius: 30px;
   height: 100%;
@@ -129,7 +138,7 @@ export const Address = styled.input`
   outline: none;
 `;
 
-export const ViewRestaurantText = styled.p`
+export const ViewRestaurantText = styled.p `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
 
@@ -137,23 +146,23 @@ export const ViewRestaurantText = styled.p`
   margin: -1px 0px;
 `;
 
-export const AnchorTag = styled.a`
+export const AnchorTag = styled.a `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
 `;
 
-export const AnchorTagBold = styled.strong`
+export const AnchorTagBold = styled.strong `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : "#743434"};
   /*   text-decoration: underline; */
 `;
 
-export const FiltersWraper = styled.div`
+export const FiltersWraper = styled.div `
   display: flex;
   align-items: center;
 `;
 
-export const Label = styled.label`
+export const Label = styled.label `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : lightMode.primary};
   background-color: ${(props) =>
@@ -180,7 +189,7 @@ export const Label = styled.label`
     margin-right: 5px;
   }
 `;
-export const Select = styled.select`
+export const Select = styled.select `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : lightMode.primary};
   background-color: ${(props) =>
@@ -200,31 +209,32 @@ export const Select = styled.select`
   outline: none;
 `;
 
-export const ResturantListingHeadingText = styled.h2`
+export const ResturantListingHeadingText = styled.h2 `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.white : "#706969"};
   margin: 20px 0px;
   font-weight: normal;
 `;
 
-export const ResturantTitle = styled.h3`
+export const ResturantTitle = styled.h3 `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.primary : lightMode.primary};
   margin: 6px 0px 8px 0px;
 `;
 
-export const ResturantTelImg = styled.img`
+export const ResturantTelImg = styled.img `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.orange : lightMode.primary};
   object-fit: cover;
   border-radius: 26px;
 `;
 
-export const ResturantGategoryTag = styled.div`
+export const ResturantGategoryTag = styled.div `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.secondary : lightMode.primary};
   background-color: ${(props) =>
-    props.theme.mode === "dark" ? darkMode.primary : lightMode.secondary};
+    props.theme.mode === "dark" ? "#c7c7c7a8" : "#ececec"
+    };
   padding: 8px;
   width: 66px;
   height: 15px;
@@ -239,7 +249,7 @@ export const ResturantGategoryTag = styled.div`
   line-height: 12px;
 `;
 
-export const MostPopularResturant = styled.div`
+export const MostPopularResturant = styled.div `
   color: ${(props) =>
     props.theme.mode === "dark" ? darkMode.white : lightMode.primary};
   background-color: ${(props) =>
