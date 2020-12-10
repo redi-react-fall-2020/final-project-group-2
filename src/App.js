@@ -7,8 +7,6 @@ import indian from "./img/indian.svg";
 import mexican from "./img/mexican.svg";
 import thai from "./img/thai.svg";
 import turkish from "./img/turkish.svg";
-import sun from "./img/sun.svg";
-import moon from "./img/moon.svg";
 import Restaurants from "./components/Restaurants";
 import RestaurantDetail from "./components/RestaurantDetail";
 import { ThemeProvider } from "styled-components";
@@ -17,6 +15,7 @@ import LandingPage from "./LandingPage";
 import { GlobalStyle } from "./StyledComp";
 import RestaurantsContext from "./contexts/restaurantsContext";
 import QueryContext from "./contexts/queryContext";
+import ThemeToggler from "./components/ThemeToggler";
 
 function App() {
   const [globalStyle, setGlobalStyle] = useState("light");
@@ -78,28 +77,15 @@ function App() {
                   cuisines={cuisines}
                   selectedCategories={selectedCategories}
                 />
-
-                <div class="tumbler__wrapper" onClick={toggelTheme}>
-                  <button class="tumbler"></button>
-                  <img style={{ width: "18px" }} src={sun} alt="logo sun" />
-                  <img style={{ width: "18px" }} src={moon} alt="logo moon" />
-                </div>
+                <ThemeToggler toggelTheme={toggelTheme} />
               </Route>
               <Route exact path="/restaurants/berlin">
                 <Restaurants logo={logo} />
-                <div class="tumbler__wrapper" onClick={toggelTheme}>
-                  <button class="tumbler"></button>
-                  <img style={{ width: "18px" }} src={sun} alt="logo sun" />
-                  <img style={{ width: "18px" }} src={moon} alt="logo moon" />
-                </div>
+                <ThemeToggler toggelTheme={toggelTheme} />
               </Route>
               <Route exact path="/restaurants/berlin/:id">
                 <RestaurantDetail logo={logo} />
-                <div class="tumbler__wrapper" onClick={toggelTheme}>
-                  <button class="tumbler"></button>
-                  <img style={{ width: "18px" }} src={sun} alt="logo sun" />
-                  <img style={{ width: "18px" }} src={moon} alt="logo moon" />
-                </div>
+                <ThemeToggler toggelTheme={toggelTheme} />
               </Route>
             </Switch>
           </Router>
