@@ -89,7 +89,7 @@ const RestaurantDetail = ({ logo }) => {
                   </div>
                   <div className="divider"></div>
                   <div className="restaurant-Price">
-                    <PriceLevel level={restaurant.price_level} />
+                    <PriceLevel level={selectedRestaurant.price_level} />
                   </div>
                   <div className="divider"></div>
                   {selectedRestaurant.opening_hours.open_now && (
