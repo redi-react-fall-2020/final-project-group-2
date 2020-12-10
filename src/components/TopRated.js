@@ -17,7 +17,7 @@ const TopRated = ({ restaurants }) => {
     <div className="Popular-Restaurants">
       <div>
         <ResturantListingHeadingText>
-          Most Rated restaurants in Berlin{" "}
+          Top Rated restaurants in <strong>Berlin</strong> {" "}
         </ResturantListingHeadingText>
       </div>
       <div className="Popular-Restaurants-wrapper"></div>

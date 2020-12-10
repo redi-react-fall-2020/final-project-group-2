@@ -14,6 +14,7 @@ import italian from "../img/Italian.svg";
 import "../img/restaurantDetailStyle.css";
 import TopRated from "./TopRated";
 import { MapWraper } from "../StyledComp";
+import PriceLevel from "./PriceLevel";
 
 const RestaurantDetail = ({ logo }) => {
   const { restaurants } = useContext(RestaurantsContext);
@@ -89,8 +90,10 @@ const RestaurantDetail = ({ logo }) => {
                       {selectedRestaurant.rating}{" "}
                     </div>{" "}
                   </div>{" "}
-                  <div className="divider"> </div>{" "}
-                  <div className="restaurant-Price"> €€€ </div>{" "}
+                  <div className="divider"> </div>
+                  <div className="restaurant-Price">
+                    <PriceLevel level={selectedRestaurant.price_level} />
+                  </div>
                   <div className="divider"> </div>{" "}
                   {selectedRestaurant.opening_hours.open_now && (
                     <div className=" restaurant-OpenNow ">
@@ -209,8 +212,10 @@ const RestaurantDetail = ({ logo }) => {
 
                 <!-- START of left side (mapView) --> */}{" "}
               {/* <div className="mapView"></div> */}
-              {/* <div className="mapView"> */}
               <MapWraper>
+                <MapView restaurants={[selectedRestaurant]} />
+              </MapWraper>
+              {/* <div className="mapView">
                 <MapView restaurants={restaurants} />
               </MapWraper>
               {/* </div> */}

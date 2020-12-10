@@ -6,12 +6,17 @@ import ratingscore from "../img/ratingscore.svg";
 import phoneIcon from "../img/phoneIcon.svg";
 import openNowIcon from "../img/Open-now-Icon.svg";
 import PriceLevel from "./PriceLevel";
-import {RestaurantCardInfo,ResturantTitle,ResturantTelImg,ResturantGategoryTag} from '../StyledComp';
+import {
+  RestaurantCardInfo,
+  ResturantTitle,
+  ResturantTelImg,
+  ResturantGategoryTag,
+} from "../StyledComp";
 
 const RestaurantCard = ({ restaurant }) => {
   return (
     <Link to={`/restaurants/berlin/${restaurant.id}`}>
-      <RestaurantCardInfo >
+      <RestaurantCardInfo>
         <div className="restaurant-img">
           <img
             className="restaurant-img-link "
@@ -21,9 +26,7 @@ const RestaurantCard = ({ restaurant }) => {
         </div>
         <div className=" restaurant-text-info ">
           <div className=" restaurant-text-Title-favoriteIcon ">
-            <ResturantTitle>
-              {restaurant.name}
-            </ResturantTitle>
+            <ResturantTitle>{restaurant.name}</ResturantTitle>
             <div className=" favoriteIcon ">
               <img src={favoriteIcon} alt="favoriteIcon" />
             </div>
@@ -43,7 +46,9 @@ const RestaurantCard = ({ restaurant }) => {
               />
             </div>
             <div className="rateScorVar">{restaurant.rating} </div>{" "}
-            <PriceLevel level={restaurant.price_level} />
+            <div className="rateScorVar">
+              <PriceLevel level={restaurant.price_level} />
+            </div>
           </div>
 
           <div className=" restaurant-description ">
@@ -54,15 +59,10 @@ const RestaurantCard = ({ restaurant }) => {
           </div>
           <div className=" restaurant-tel-cuisine-openNow ">
             <div className=" restaurant-tel ">
-              <ResturantTelImg
-                src={phoneIcon}
-                alt="phoneIcon"
-              />
+              <ResturantTelImg src={phoneIcon} alt="phoneIcon" />
               <p>{restaurant.social.phone}</p>
             </div>
-            <ResturantGategoryTag >
-              {restaurant.cuisine}
-            </ResturantGategoryTag>
+            <ResturantGategoryTag>{restaurant.cuisine}</ResturantGategoryTag>
 
             {restaurant.opening_hours.open_now && (
               <div className=" restaurant-OpenNow ">

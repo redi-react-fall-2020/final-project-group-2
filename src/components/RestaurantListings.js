@@ -7,7 +7,7 @@ const RestaurantListings = ({ restaurants }) => {
     <>
       <div className="sectionTitle">
         <ResturantListingHeadingText>
-          Restaurants in Berlin{" "}
+          Restaurants in <strong>Berlin</strong>{" "}
         </ResturantListingHeadingText>
       </div>
 

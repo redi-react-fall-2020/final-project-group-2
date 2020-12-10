@@ -1,209 +1,216 @@
 .goBackBtn {
-    height: 28px;
-    margin-top: 10px;
+  height: 28px;
+  margin-top: 10px;
 }
 
 .goBackBtn a {
-    display: flex;
-    text-decoration: none;
+  display: flex;
+  text-decoration: none;
 }
 
 .goBackBtn img {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .imgSlider {
-    width: 680px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 19px;
+  width: 680px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 19px;
 }
 
 .imgSliderDiv {
-    width: fit-content;
-    overflow: hidden;
+  width: fit-content;
+  overflow: hidden;
 }
 
 .imgNav {
-    width: 680px;
-    position: absolute;
-    height: 364px;
-    /* background-color: beige; */
-    justify-content: space-between;
-    display: flex;
-    overflow: hidden;
-    /* border-radius: 12px 0; */
+  width: 680px;
+  position: absolute;
+  height: 364px;
+  /* background-color: beige; */
+  justify-content: space-between;
+  display: flex;
+  overflow: hidden;
+  /* border-radius: 12px 0; */
 }
 
 .leftBtn {
-    width: 45px;
-    height: 364px;
-    border-radius: 19px 0 0 19px;
-    background-color: #00000042;
+  width: 45px;
+  height: 364px;
+  border-radius: 19px 0 0 19px;
+  background-color: #00000042;
 }
 
 .RightBtn {
-    width: 45px;
-    height: 364px;
-    border-radius: 0 19px 19px 0;
-    /* background-color: #000000bf; */
-    background-color: #00000042;
+  width: 45px;
+  height: 364px;
+  border-radius: 0 19px 19px 0;
+  /* background-color: #000000bf; */
+  background-color: #00000042;
 }
 
 .CuisineImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 45px;
 }
 
 .CuisineTitle {
-    text-align: center;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 15px;
-    text-transform: capitalize;
-    color: #8c8b8a;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: capitalize;
+  color: #8c8b8a;
 }
 
 .restaurantTitle {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 14px;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
-    color: #6d6d6d;
-    margin-top: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #6d6d6d;
+  margin-top: 20px;
 }
 
 .restaurant-Rate-Price-OpenNow {
-    display: flex;
-    width: 405px;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top: 8px;
+  display: flex;
+  width: 405px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 8px;
 }
 
 .divider {
-    background-color: #bdbdbd;
-    height: 3px;
-    width: 3px;
-    border-radius: 27px;
+  background-color: #bdbdbd;
+  height: 3px;
+  width: 3px;
+  border-radius: 27px;
 }
 
 .CuisineContainer {
-    /* background-color: aquamarine; */
-    width: 77px;
+  /* background-color: aquamarine; */
+  width: 77px;
 }
 
 .restaurant-Price {
-    color: #ff7f00;
-    font-weight: bold;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 17px;
-    line-height: 19px;
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
+  color: #ff7f00;
+  font-weight: bold;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 19px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
 }
 
 .restaurant-Cuisine-DietaryRestriction-Delivery {
-    display: flex;
-    /* justify-content: start; */
-    width: 346px;
-    justify-content: space-between;
+  display: flex;
+  /* justify-content: start; */
+  width: 346px;
+  justify-content: space-between;
 }
 
 .restaurant-Cuisine {
-    /* margin-right: 47px; */
+  /* margin-right: 47px; */
 }
 
-.categoryImg {}
+.categoryImg {
+}
 
-.categoryTitle {}
+.categoryTitle {
+}
 
 .restaurant-DietaryRestriction {
-    /* margin-right: 47px; */
+  /* margin-right: 47px; */
 }
 
-.DietaryRestrictionImg {}
+.DietaryRestrictionImg {
+}
 
-.DietaryRestrictionTitle {}
+.DietaryRestrictionTitle {
+}
 
 .restaurant-Delivery {
-    margin-right: 47px;
+  margin-right: 47px;
 }
 
 .restaurantDescription {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 18px;
-    text-transform: capitalize;
-    color: #bdbdbd;
-    width: 583px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #bdbdbd;
+  width: 583px;
 }
 
 .restaurant-Address {
-    display: flex;
-    margin-bottom: 14px;
+  display: flex;
+  /*     margin-bottom: 14px; */
 }
 
 .restaurant-tel-Icon {
-    color: #ff7f00;
-    padding-right: 15px;
+  color: #ff7f00;
+  padding-right: 10px;
+  width: 14px;
 }
-.restaurant-tel{
+.restaurant-tel {
+}
 
+.restaurant-tel {
 }
 
 .restaurant-OpningTime {
-    display: flex;
+  display: flex;
 }
 
 .openFromTo {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
-    color: #808080;
+  /*     font-family: Roboto; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #808080;
 }
 
 .Img-Icon {
-    margin-right: 10px;
-    width: 14px;
-    text-align: center;
+  margin-right: 10px;
+  width: 14px;
+  text-align: center;
 }
 
 .textInfo {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
-    color: #808080;
+  /*     font-family: Roboto; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #808080;
 }
 
 .categoryDivider {
-    background-color: #0000001a;
-    height: 50px;
-    width: 1px;
+  background-color: #0000001a;
+  height: 50px;
+  width: 1px;
 }
