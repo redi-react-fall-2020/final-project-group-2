@@ -13,6 +13,7 @@ import pickupIcon from "../img/pickup.svg";
 import italian from "../img/Italian.svg";
 import "../img/restaurantDetailStyle.css";
 import TopRated from "./TopRated";
+import { MapWraper } from "../StyledComp";
 
 const RestaurantDetail = ({ logo }) => {
   const { restaurants } = useContext(RestaurantsContext);
@@ -207,10 +208,12 @@ const RestaurantDetail = ({ logo }) => {
 
 
                 <!-- START of left side (mapView) --> */}{" "}
-              {/* <div className="mapView"></div> */}{" "}
-              <div className="mapView">
-                <MapView restaurants={restaurants} />{" "}
-              </div>{" "}
+              {/* <div className="mapView"></div> */}
+              {/* <div className="mapView"> */}
+              <MapWraper>
+                <MapView restaurants={restaurants} />
+              </MapWraper>
+              {/* </div> */}
               {/* <!-- END of left side (mapView) --> */}{" "}
             </div>{" "}
           </div>
