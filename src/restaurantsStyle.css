@@ -571,7 +571,10 @@ Not supports in Firefox and IE */
 }
 
 .categoryImg:hover {
-    box-shadow: -1px 4px 30px -17px #000000;
+    /*  box-shadow: -1px 4px 30px -17px #000000;
+    box-shadow: inset -1px 1px 30px -17px #ffffff; */
+    box-shadow: 1px 1px 20px -10px rgb(0 0 0 / 25%),
+        inset 0px 0px 20px 5px rgb(231 159 159 / 63%);
 }
 
 .categoryText {
