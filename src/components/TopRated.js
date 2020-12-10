@@ -20,16 +20,7 @@ const TopRated = ({ restaurants }) => {
           Most Rated restaurants in Berlin{" "}
         </ResturantListingHeadingText>
       </div>
-      {/* <div className="Popular-Restaurants-wrapper">
-        <div className="navIcon">
-          <div className="navLeft">
-            <img src={navLeft} alt="nav-left" />
-          </div>
-          <div className="navRight">
-            <img src={navRight} alt="nav-right" />
-          </div>
-        </div>
-      </div> */}
+      <div className="Popular-Restaurants-wrapper"></div>
 
       <div className="Popular-Restaurants-wrapper">
         {topRestaurants.map((restaurant) => (

@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import CategorySelector from "./components/CategorySelector";
 
 export const Category = styled.div`
   align-items: center;
@@ -30,6 +31,14 @@ const darkMode = {
   searchBar: "#444E74",
   header: "#333D61",
 };
+
+export const MapWraper = styled.div`
+  background: ${(props) =>
+    props.theme.mode === "dark" ? darkMode.mapImageUrl : lightMode.mapImageUrl};
+  width: 100%;
+  filter: ${(props) => (props.theme.mode === "dark" ? "invert(1)" : "none")};
+`;
+
 export const GlobalStyle = createGlobalStyle`
   body{
     background-color: ${(props) =>
@@ -45,7 +54,7 @@ export const HeaderWarper = styled.div`
   flex-direction: row;
   padding-left: 17px;
   align-items: center;
-  border-bottom: 1px dotted #c3c3c3;
+
 }
 `;
 export const AppTheme = styled.div`
@@ -79,6 +88,7 @@ export const ListCategories = styled.div`
   justify-content: space-between;
   width: 90%;
   padding: 20px 0px 0px 0px;
+  width: 722px;
 `;
 
 export const HeadingText = styled.p`
@@ -236,10 +246,4 @@ export const MostPopularResturant = styled.div`
   flex-direction: column;
   padding-top: 12px;
   margin: 0 4px;
-`;
-
-export const MapWraper = styled.div`
-  background: ${(props) =>
-    props.theme.mode === "dark" ? darkMode.mapImageUrl : lightMode.mapImageUrl};
-  width: 100%;
 `;
